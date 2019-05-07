@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+  transition-property: none;
+  transition-duration: .25s;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.site-header {
+  display: flex;
+  position: relative;
+  background: #0984e3;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  font-size: 2em;
+}
+
+.site-header-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.account-nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #0767b2;
+}
+
+.account-nav-link {
+  padding: .5em 1em;
+  transition-property: background;
+}
+
+.account-nav-link:hover {
+  background: #065999;
+}
+
+.site-nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.site-nav-item {
+  transition-property: background;
+}
+
+.site-nav-item:hover {
+  background: #5ab3f8;
+}
+
+.site-nav-item-content {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  padding: 2em;
+  background: #5ab3f8;
+  opacity: 0;
+  z-index: 2;
+  transition-property: visibility, opacity;
+}
+
+.site-nav-item:hover > .site-nav-item-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.site-nav-item-title {
+  display: block;
+  padding: .5em;
+  font-size: 2em;
+}
+
+.site-nav-item-content-group:not(:last-child) {
+  padding-right: 3em;
+  margin-right: 3em;
+  border-right: .25em solid white;
+}
+
+.site-nav-item-content-group-title {
+  margin-bottom: .25em;
+  font-size: 2em;
+}
+
+.site-nav-item-content-group-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav-item-content-group-title:hover,
+.site-nav-item-content-group-link:hover,
+.main-page-subheading:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 75%;
+  padding: 2em;
+  margin: 0 auto;
+  color: black;
+}
+
+.main-page-subheading {
+  display: block;
+  margin-bottom: .5em;
+  font-size: 2.5em;
+}
+
+.main-page-link-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-page-block-link {
+  position: relative;
+  width: 30%;
+  height: 20em;
+  padding: 2em;
+  margin-bottom: 2em;
+  background: #00abb3;
+  transition-property: background;
+  color: white;
+}
+
+.main-page-block-link:hover {
+  background: #009399;
+}
+
+.main-page-block-link-title {
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.main-page-block-link-title small {
+  display: block;
+  font-size: .5em;
+}
+
+.main-page-block-link-arrow {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2em;
+}
+
+.registration {
+  max-width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.registration h2 {
+  font-size: 3em;
+}
+
+.registration p {
+  margin-bottom: 2em;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+
+input, .registration-form a {
+  font-size: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+  color: white;
+  transition-property: background;
+  background: #00abb3;
+  padding: .5em;
+  margin-bottom: .5em;
+}
+
+input:hover,
+input:focus,
+.registration-form a:hover {
+  background: #009399;
+}
+
+.registration-form a {
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.registration a {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+}
+
+.content-sidebar {
+  font-size: 16px;
+  width: 1000pt;
+}
+
+.content-sidebar ul {
+  list-style: none;
+}
+
+.content-nav {
+  background: #00abb3;
+  width: 85%;
+  color: white;
+}
+
+.content-nav a {
+  transition-property: background;
+  display: block;
+}
+
+.content-nav a:hover {
+  background: #009399;
+}
+
+.content-nav ul {
+  padding-left: 0;
+}
+
+.content-nav ul ul a {
+  padding-left: 2em;
+}
+
+.content-body {
+  padding: 0 ;
+}
+
+.content-body h2, .content-body h3, .content-body h4 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.content-body h2 {
+  font-size: 3em;
+}
+
+.content-body h3 {
+  font-size: 2em;
+}
+
+.content-body h4 {
+  font-size: 1.5em;
+}
+
+.content-body p {
+  margin-bottom: 1em;
+}
+
+.attribution {
+  font-weight: bold;
+
+margin-top: 3em;
+}
+
+.content-body pre {
+  background: #009399;
+  padding: .5em;
+  color: white;
+}
+
+.user {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.user h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.user p {
+  margin: 2em;
+}
+
+#a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+#a i {
+  font-size: 5em;
+  margin-right: 1em;
+}
+
+.edit {
+  font-size: 2em;
+  margin-top: 2em;
+  padding: .5em 1em;
+  transition-property: background;
+  background: #00abb3;
+  color: white;
+}
+
+.edit:hover {
+  background: #009399;
+}
+
+.messages {
+  max-width: 100%;
+  padding: 0;
+  display: flex;
+}
+
+.messages-sidebar {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  color: white;
+}
+
+.messages-sidebar-item {
+  padding: 1em;
+  transition-property: background;
+  background: #00abb3;
+}
+
+.messages-sidebar-item:hover {
+  background: #009399;
+}
+
+.author {
+  float: right;
+}
+
+.message-body {
+  width: 100%;
+  padding: 3em;
+  display: flex;
+}
+
+.author-sidebar {
+  text-align: center;
+  font-size: 2em;
+}
+
+.author-sidebar i {
+  font-size: 2em;
+}
+
+.author-sidebar p {
+  margin: 0 !important;
+}
+
+.message-content, .comment-content {
+  padding-left: 3em;
+}
+
+.message-content h2 {
+  font-size: 3em;
+  margin-bottom: .5em;
+}
+
+.message-content p {
+  margin: 1em 0;
+}
+
+.comment {
+  display: flex;
+  margin-top: 5em;
+}
+
+.message-date {
+  float: right;
+}
+
+.comment-content {
+  width: 100%;
+}
+
+.user-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-search table {
+  margin-top: 3em;
+  color: white;
+}
+
+.user-search td {
+  padding: .5em 1em;
+}
+
+.user-search tr:nth-child(odd) {
+  background: #00abb3;
+}
+
+.user-search tr:nth-child(even) {
+  background: #009399;
+}
+
+.user-search thead tr {
+  background: #009399 !important;
+}
+
+.registration-form a {
+  display: block;
+  text-decoration: none;
+}
+
+.user-search h2   {
+  font-size: 3em;
+  margin-bottom: 1em;
+}

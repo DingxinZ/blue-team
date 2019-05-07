@@ -1,0 +1,198 @@
+    <main class="content">
+      <aside class="content-sidebar">
+        <nav class="content-nav">
+            <ul>
+              <li>
+                HTML
+                <ul>
+                  <li><a href="/HTML-int">HTML intro</a></li>
+                  <li><a href="/HTML-tut">HTML tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                CSS
+                <ul>
+                  <li><a href="/CSS-int">CSS intro</a></li>
+                  <li><a  href="/CSS-tut">CSS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                JS
+                <ul>
+                  <li><a href="/JS-int">JS intro</a></li>
+                  <li><a href="/JS-tut">JS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                Python/Bottle
+                <ul>
+                  <li><a href="/PB-int">Python/Bottle intro</a></li>
+                  <li><a href="/PB-tut">Python/Bottle tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                PHP
+                <ul>
+                  <li><a href="/PHP-int">PHP intro</a></li>
+                  <li><a href="/PHP-tut">PHP tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQL
+                <ul>
+                  <li><a href="/SQL-int">SQL intro</a></li>
+                  <li><a href="/SQL-tut">SQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                MySQL
+                <ul>
+                  <li><a href="/Mysql-int">MySQL intro</a></li>
+                  <li><a href="/Mysql-tut">MySQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQLite
+                <ul>
+                  <li><a href="/SQLite-int">SQLite intro</a></li>
+                  <li><a href="/SQLite-tut">SQLite tutorial</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </aside>
+      <div class="content-body">
+        <h2>Basic Construction of an HTML Page</h2>
+        <p style="background: transparent; page-break-before: auto;">These tags should be placed underneath each other <strong>at the top of every HTML page</strong> that you create.</p>
+        <p style="background: transparent;"><code class="western"><a href="https://html.com/tags/doctype/">&lt;!DOCTYPE
+        html&gt;</a></code> &mdash; This tag <strong>specifies the language</strong> you will write on the page. In this case, the language is HTML 5.</p>
+        <p style="background: transparent;"><code class="western"><a href="https://html.com/tags/html/">&lt;html&gt;</a></code> &mdash; This tag signals that from here on we are going to write in HTML code.</p>
+        <p style="background: transparent;"><code class="western"><a href="https://html.com/tags/head/">&lt;head&gt;</a></code> &mdash; This is where all the <strong>metadata for the page</strong> goes &mdash; stuff mostly meant for search engines and other computer programs.</p>
+        <p style="background: transparent;"><code class="western"><a href="https://html.com/tags/body/">&lt;body&gt;</a></code> &mdash; This is where the <strong>content of the page</strong> goes.</p>
+        <p style="background: transparent;">Inside the <code class="western">&lt;head&gt;</code> tag, there is one tag that is always included: <code class="western">&lt;title&gt;</code>, but there are others that are just as important:</p>
+        <dl>
+        <dt style="background: transparent;"><code class="western"><a href="https://html.com/tags/title/">&lt;title&gt;</a></code></dt>
+        <dd style="margin-left: 0cm; background: transparent;">This is where we <strong>insert the page name</strong> as it will appear at the top of the browser window or tab.</dd>
+        <dt style="background: transparent;"><code class="western"><a href="https://html.com/tags/meta/">&lt;meta&gt;</a></code></dt>
+        <dd style="margin-left: 0cm; margin-bottom: 0.5cm; background: transparent;">This is where information <em>about</em> the document is stored: character encoding, name (page context), description.</dd>
+        </dl>
+        <h3>Adding Content</h3>
+        <p style="background: transparent;">The HTML <code class="western">&lt;body&gt;</code> is where we add the content which is designed for viewing by human eyes.</p>
+        <p style="background: transparent;">This includes <strong>text, images, tables, forms </strong>and everything else that we see on the internet each day.</p>
+        <h3 >How To Add Text In HTML</h3>
+        <p style="background: transparent;">Adding text to our HTML page is simple using an element opened with the tag <code class="western"><a href="https://html.com/tags/p/">&lt;p&gt;</a></code> which <strong>creates a new paragraph</strong>. We place all of our regular text inside the element <code class="western">&lt;p&gt;</code>.</p>
+        <p style="background: transparent;">When we write text in HTML, we also have a number of other elements we can use to <strong>control the text or make it appear in a certain way</strong>.</p>
+        <h3 >Other Key Elements: They are as follows:</h3>
+        <p><a name="tablepress-3"></a></p>
+        <dl>
+        <dd>
+        <table width="439" cellspacing="0" cellpadding="2">
+        <thead>
+        <tr>
+        <th style="border: none; padding: 0cm;" width="68">
+        <p><strong>Element</strong></p>
+        </th>
+        <th style="border: none; padding: 0cm;" width="117">
+        <p><strong>Meaning</strong></p>
+        </th>
+        <th style="border: none; padding: 0cm;" width="243">
+        <p><strong>Purpose</strong></p>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td style="border: none; padding: 0cm;" width="68">
+        <p><strong>&lt;b&gt;</strong></p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="117">
+        <p>Bold</p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="243">
+        <p>Highlight important information</p>
+        </td>
+        </tr>
+        <tr>
+        <td style="border: none; padding: 0cm;" width="68">
+        <p><strong>&lt;strong&gt;</strong></p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="117">
+        <p>Strong</p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="243">
+        <p>Similarly to bold, to highlight key text</p>
+        </td>
+        </tr>
+        <tr>
+        <td style="border: none; padding: 0cm;" width="68">
+        <p><strong>&lt;i&gt;</strong></p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="117">
+        <p>Italic</p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="243">
+        <p>To denote text</p>
+        </td>
+        </tr>
+        <tr>
+        <td style="border: none; padding: 0cm;" width="68">
+        <p><strong>&lt;em&gt;</strong></p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="117">
+        <p>Emphasised Text</p>
+        </td>
+        <td style="border: none; padding: 0cm;" width="243">
+        <p>Usually used as image captions</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        </dd>
+        </dl>
+        <p style="line-height: 115%; background: transparent;">These tags <strong>must</strong> be opened and closed around the text in question.</p>
+        <h3>How To Add Links In HTML</h3>
+        <p style="background: transparent; page-break-before: auto;">As you may have noticed, the internet is made up of lots of <a href="https://html.com/anchors-links/">links</a>.</p>
+        <p style="background: transparent;">Almost everything you click on while surfing the web is a link <strong>takes you to another page</strong> within the website you are visiting or to an external site.</p>
+        <p style="background: transparent;">Links are included in an attribute opened by the <strong><a href="https://html.com/tags/a/">&lt;a&gt;</a></strong> tag. This element is the first that we&rsquo;ve met which uses an attribute and so it <strong>looks different to previously mentioned tags</strong>.</p>
+        <h3 >The Anchor Tag</h3>
+        <p style="background: transparent;">The &lt;a&gt; (or anchor) opening tag is written in the format:</p>
+        <p style="background: transparent;"><code class="western">&lt;<a href="https://html.com/attributes/a-href/">a
+        href</a>="<a href="https://blogging.com/how-to-start-a-blog/">https://blogging.com/how-to-start-a-blog/</a>"&gt;Your
+        Link Text Here &lt;/a&gt;</code></p>
+        <p style="background: transparent;">The <strong>first part</strong> of the attribute <strong>points to the page that will open</strong> once the link is clicked.</p>
+        <p style="background: transparent;">Meanwhile, the <strong>second part</strong> of the attribute contains the <strong>text which will be displayed</strong> to a visitor in order to entice them to click on that link.</p>
+        <p style="background: transparent;">If you are building your own website then you will most likely host all of your pages on professional <a href="https://html.com/web-hosting//">web hosting</a>. In this case, internal links on your website will &lt;a href=&rdquo;mylinkedpage.html&rdquo;&gt;Linktle Here&lt;/a&gt;.</p>
+        <h3 class="western" style="background: transparent;">Let's Create An Anchor Tag</h3>
+        <p style="background: transparent;">Let&rsquo;s try it out. Make a duplicate of the code from your current index.html page. Copy / paste it into a new window in your HTML editor.</p>
+        <p style="background: transparent;">Save this new page as &ldquo;page2.html&rdquo; and ensure that it is saved in the same folder as your index.html page.</p>
+        <p style="background: transparent;">On page2.html add the following code:</p>
+        <p style="background: transparent;"><code class="western">&lt;a
+        href="<a href="http://www.google.com/">http://www.google.com</a>"&gt;Google&lt;/a&gt;</code></p>
+        <p style="background: transparent;">This will create a link to Google on page 2. Hit save and return to your index.html page.</p>
+        <p style="background: transparent;">On a new line on index.html add the following code:</p>
+        <p style="background: transparent;"><code class="western">&lt;a
+        href="*folder(s)*/page2.html"&gt;Page2&lt;/a&gt;</code></p>
+        <p style="background: transparent;">Ensure the folder path to the file (page2.html) is correct. <strong>Hit save and preview</strong> index.html in your browser.</p>
+        <p style="background: transparent;">If <strong>everything is correct</strong> then <strong>you will see a link which will take you to your second page</strong>. On the second page, there will be a link that will take you to google.com.</p>
+        <h2> How To Add Images In HTML To Your Website</h3>
+        <p>In today&rsquo;s modern digital world, <a href="https://html.com/blog/100-legal-sources-free-stock-images/">images</a> are everything. The <strong><a href="https://html.com/tags/img/">&lt;img&gt;</a></strong> tag has everything you need to display images on your site. Much like the &lt;a&gt; anchor element, &lt;img&gt; also contains an attribute.</p>
+        <p>The attribute <em>features information</em> for your computer regarding the <strong>source</strong>, <strong>height</strong>, <strong>width</strong> and <strong>alt text</strong> of the image.</p>
+        <h3 class="western">Styling and Formats</h3>
+        <p>You can also define borders and other styles around the image using the class attribute. However, we shall cover this in a later tutorial.</p>
+        <p>The file types generally used for <strong>image files online are</strong>: .jpg, .png, and (less and less) .gif.</p>
+        <p>Alt text is important to <strong>ensure that your site is ranked correctly</strong> on search sites and also for visually impaired visitors to your site.</p>
+        <p>The <a href="https://html.com/attributes/img-alt/">&lt;img&gt;</a> tag normally is written as follows:</p>
+        <p><code class="western">&lt;img src="yourimage.jpg"
+        alt="Describe the image" height="X" width="X"&gt;</code></p>
+        <p>Let&rsquo;s try it out.</p>
+        <h3 class="western">Create Your Own Image With An Alt Text</h3>
+        <p>Save an image (.jpg, .png, .gif format) of your choice in the same folder where you&rsquo;ve saved index.html and page2.html. Call this image &ldquo;testpic.jpg.&rdquo;</p>
+        <p>On a new line in your HTML editor <strong>enter the following code</strong>:</p>
+        <p><code class="western">&lt;img src="testpic.jpg"
+        alt="This is a test image" height="42"
+        width="42"&gt;</code></p>
+       <p class="attribution">Copied from Source: https://html.com/</p>
+     </div>
+    </main>
+  </body>
+</html>

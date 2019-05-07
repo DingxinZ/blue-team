@@ -1,0 +1,194 @@
+    <main class="content">
+      <aside class="content-sidebar">
+        <nav class="content-nav">
+            <ul>
+              <li>
+                HTML
+                <ul>
+                  <li><a href="/HTML-int">HTML intro</a></li>
+                  <li><a href="/HTML-tut">HTML tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                CSS
+                <ul>
+                  <li><a href="/CSS-int">CSS intro</a></li>
+                  <li><a  href="/CSS-tut">CSS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                JS
+                <ul>
+                  <li><a href="/JS-int">JS intro</a></li>
+                  <li><a href="/JS-tut">JS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                Python/Bottle
+                <ul>
+                  <li><a href="/PB-int">Python/Bottle intro</a></li>
+                  <li><a href="/PB-tut">Python/Bottle tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                PHP
+                <ul>
+                  <li><a href="/PHP-int">PHP intro</a></li>
+                  <li><a href="/PHP-tut">PHP tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQL
+                <ul>
+                  <li><a href="/SQL-int">SQL intro</a></li>
+                  <li><a href="/SQL-tut">SQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                MySQL
+                <ul>
+                  <li><a href="/Mysql-int">MySQL intro</a></li>
+                  <li><a href="/Mysql-tut">MySQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQLite
+                <ul>
+                  <li><a href="/SQLite-int">SQLite intro</a></li>
+                  <li><a href="/SQLite-tut">SQLite tutorial</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </aside>
+      <div class="content-body">
+        <h2 ><strong>Request Routing</strong></h2>
+        <p><a name="request-routing"></a>In the last chapter we built a very simple web application with only a single route. Here is the routing part of the &ldquo;Hello World&rdquo; example again:</p>
+        <pre class=" language-python" data-language="python">@route<span class="token punctuation">(</span><span class="token string">'/hello'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Hello World!"</span>
+        </pre>
+        <p>The <a class="reference internal" title="bottle.route" href="https://devdocs.io/bottle~0.12/api#bottle.route"><code>route()</code></a> decorator links an URL path to a callback function, and adds a new route to the <a href="https://devdocs.io/bottle~0.12/tutorial#tutorial-default">default application</a>. An application with just one route is kind of boring, though. Let&rsquo;s add some more:</p>
+        <pre class=" language-python" data-language="python">@route<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+        @route<span class="token punctuation">(</span><span class="token string">'/hello/&lt;name&gt;'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'Stranger'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> template<span class="token punctuation">(</span><span class="token string">'Hello {{name}}.'</span><span class="token punctuation">,</span> name<span class="token operator">=</span>name<span class="token punctuation">)</span>
+        </pre>
+        <p>This example demonstrates two things: You can bind more than one route to a single callback, and you can add wildcards to URLs and access them via keyword arguments.</p>
+        <h3 class="western"><a name="tutorial-dynamic-routes"></a>Dynamic Routes</h3>
+        <p><a name="dynamic-routes"></a>Routes that contain wildcards are called <code class="western">dynamic routes</code> (as opposed to <code class="western">static routes</code>) and match more than one URL at the same time. A simple wildcard consists of a name enclosed in angle brackets (e.g. <code class="western">&lt;name&gt;</code>) and accepts one or more characters up to the next slash (<code class="western">/</code>). For example, the route <code class="western">/hello/&lt;name&gt;</code> accepts requests for <code class="western">/hello/alice</code> as well as <code class="western">/hello/bob</code>, but not for <code class="western">/hello</code>, <code class="western">/hello/</code> or <code class="western">/hello/mr/smith</code>.</p>
+        <p>Each wildcard passes the covered part of the URL as a keyword argument to the request callback. You can use them right away and implement RESTful, nice-looking and meaningful URLs with ease. Here are some other examples along with the URLs they&rsquo;d match:</p>
+        <pre class=" language-python" data-language="python">@route<span class="token punctuation">(</span><span class="token string">'/wiki/&lt;pagename&gt;'</span><span class="token punctuation">)</span>            <span class="token comment"># matches /wiki/Learning_Python</span>
+        <span class="token keyword">def</span> <span class="token function">show_wiki_page</span><span class="token punctuation">(</span>pagename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+@route<span class="token punctuation">(</span><span class="token string">'/&lt;action&gt;/&lt;user&gt;'</span><span class="token punctuation">)</span>            <span class="token comment"># matches /follow/defnull</span>
+        <span class="token keyword">def</span> <span class="token function">user_api</span><span class="token punctuation">(</span>action<span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        </pre>
+        <div class="versionadded">
+        <h3><span class="versionmodified">New in version 0.10.</span></h3>
+        </div>
+        <p>Filters are used to define more specific wildcards, and/or transform the covered part of the URL before it is passed to the callback. A filtered wildcard is declared as <code>&lt;name:filter&gt;</code> or <code>&lt;name:filter:config&gt;</code>. The syntax for the optional config part depends on the filter used.</p>
+        <p>The following filters are implemented by default and more may be added:</p>
+        <ul class="simple">
+        <li><strong>:int</strong> matches (signed) digits only and converts the value to integer.</li>
+        <li><strong>:float</strong> similar to :int but for decimal numbers.</li>
+        <li><strong>:path</strong> matches all characters including the slash character in a non-greedy way and can be used to match more than one path segment.</li>
+        <li><strong>:re</strong> allows you to specify a custom regular expression in the config field. The matched value is not modified.</li>
+        </ul>
+        <p>Let&rsquo;s have a look at some practical examples:</p>
+        <pre class=" language-python" data-language="python">@route<span class="token punctuation">(</span><span class="token string">'/object/&lt;id:int&gt;'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span>
+
+        @route<span class="token punctuation">(</span><span class="token string">'/show/&lt;name:re:[a-z]+&gt;'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">callback</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">assert</span> name<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        @route<span class="token punctuation">(</span><span class="token string">'/static/&lt;path:path&gt;'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">callback</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> static_file<span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+        </pre>
+        <p>You can add your own filters as well. See <code>Routing</code> for details.</p>
+        <div class="versionchanged">
+        <h3>Changed in version 0.10.</h3>
+        </div>
+        <p>The new rule syntax was introduced in <strong>Bottle 0.10</strong> to simplify some common use cases, but the old syntax still works and you can find a lot of code examples still using it. The differences are best described by example:</p>
+        <table class="docutils">
+        <thead valign="bottom">
+        <tr class="row-odd">
+        <th class="head">Old Syntax</th>
+        <th class="head">New Syntax</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="row-even">
+        <td><code>:name</code></td>
+        <td><code>&lt;name&gt;</code></td>
+        </tr>
+        <tr class="row-odd">
+        <td><code>:name#regexp#</code></td>
+        <td><code>&lt;name:re:regexp&gt;</code></td>
+        </tr>
+        <tr class="row-even">
+        <td><code>:#regexp#</code></td>
+        <td><code>&lt;:re:regexp&gt;</code></td>
+        </tr>
+        <tr class="row-odd">
+        <td><code>:##</code></td>
+        <td><code>&lt;:re&gt;</code></td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Try to avoid the old syntax in future projects if you can. It is not currently deprecated, but will be eventually.</p>
+        <h3 id="http-request-methods">HTTP Request Methods</h3>
+        <p>The HTTP protocol defines several <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">request methods</a> (sometimes referred to as &ldquo;verbs&rdquo;) for different tasks. GET is the default for all routes with no other method specified. These routes will match GET requests only. To handle other methods such as POST, PUT or DELETE, add a <code>method</code> keyword argument to the <a class="reference internal" title="bottle.route" href="https://devdocs.io/bottle~0.12/api#bottle.route"><code>route()</code></a> decorator or use one of the four alternative decorators: <a class="reference internal" title="bottle.get" href="https://devdocs.io/bottle~0.12/api#bottle.get"><code>get()</code></a>, <a class="reference internal" title="bottle.post" href="https://devdocs.io/bottle~0.12/api#bottle.post"><code>post()</code></a>, <a class="reference internal" title="bottle.put" href="https://devdocs.io/bottle~0.12/api#bottle.put"><code>put()</code></a> or <a class="reference internal" title="bottle.delete" href="https://devdocs.io/bottle~0.12/api#bottle.delete"><code>delete()</code></a>.</p>
+        <p>The POST method is commonly used for HTML form submission. This example shows how to handle a login form using POST:</p>
+        <pre class=" language-python" data-language="python"><span class="token keyword">from</span> bottle <span class="token keyword">import</span> get<span class="token punctuation">,</span> post<span class="token punctuation">,</span> request <span class="token comment"># or route</span>
+
+        @get<span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span> <span class="token comment"># or @route('/login')</span>
+<span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token triple-quoted-string string">'''
+      &lt;form action="/login" method="post"&gt;
+          Username: &lt;input name="username" type="text" /&gt;
+          Password: &lt;input name="password" type="password" /&gt;
+          &lt;input value="Login" type="submit" /&gt;
+      &lt;/form&gt;
+            '''</span>
+
+        @post<span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span> <span class="token comment"># or @route('/login', method='POST')</span>
+        <span class="token keyword">def</span> <span class="token function">do_login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            username <span class="token operator">=</span> request<span class="token punctuation">.</span>forms<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span>
+            password <span class="token operator">=</span> request<span class="token punctuation">.</span>forms<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'password'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> check_login<span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token string">"&lt;p&gt;Your login information was correct.&lt;/p&gt;"</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token string">"&lt;p&gt;Login failed.&lt;/p&gt;"</span>
+        </pre>
+        <p>In this example the <code>/login</code> URL is linked to two distinct callbacks, one for GET requests and another for POST requests. The first one displays a HTML form to the user. The second callback is invoked on a form submission and checks the login credentials the user entered into the form. The use of <code>Request.forms</code> is further described in the <a class="reference internal" href="https://devdocs.io/bottle~0.12/tutorial#tutorial-request">Request Data</a> section.</p>
+        <h2 id="tutorial-output">Generating content</h2>
+        <p id="generating-content">In pure WSGI, the range of types you may return from your application is very limited. Applications must return an iterable yielding byte strings. You may return a string (because strings are iterable) but this causes most servers to transmit your content char by char. Unicode strings are not allowed at all. This is not very practical.</p>
+        <p>Bottle is much more flexible and supports a wide range of types. It even adds a <code>Content-Length</code> header if possible and encodes unicode automatically, so you don&rsquo;t have to. What follows is a list of data types you may return from your application callbacks and a short description of how these are handled by the framework:</p>
+        <dl class="docutils">
+        <dt>Dictionaries</dt>
+        <dd>As mentioned above, Python dictionaries (or subclasses thereof) are automatically transformed into JSON strings and returned to the browser with the <code>Content-Type</code> header set to <code>application/json</code>. This makes it easy to implement json-based APIs. Data formats other than json are supported too. See the <span class="xref std std-ref">tutorial-output-filter</span> to learn more.</dd>
+        <dt><code>Empty Strings, False, None or other non-true values:</code></dt>
+        <dd>These produce an empty output with the <code>Content-Length</code> header set to 0.</dd>
+        <dt>Unicode strings</dt>
+        <dd>Unicode strings (or iterables yielding unicode strings) are automatically encoded with the codec specified in the <code>Content-Type</code> header (utf8 by default) and then treated as normal byte strings (see below).</dd>
+        <dt>Byte strings</dt>
+        <dd>Bottle returns strings as a whole (instead of iterating over each char) and adds a <code>Content-Length</code> header based on the string length. Lists of byte strings are joined first. Other iterables yielding byte strings are not joined because they may grow too big to fit into memory. The <code>Content-Length</code> header is not set in this case.</dd>
+        <dt><code>Instances of HTTPError or</code> <a class="reference internal" title="bottle.HTTPResponse" href="https://devdocs.io/bottle~0.12/api#bottle.HTTPResponse"><code>HTTPResponse</code></a></dt>
+        <dd>Returning these has the same effect as when raising them as an exception. In case of an <a class="reference internal" title="bottle.HTTPError" href="https://devdocs.io/bottle~0.12/api#bottle.HTTPError"><code>HTTPError</code></a>, the error handler is applied. See <a class="reference internal" href="https://devdocs.io/bottle~0.12/tutorial#tutorial-errorhandling">Error Pages</a> for details.</dd>
+        <dt>File objects</dt>
+        <dd>Everything that has a <code>.read()</code> method is treated as a file or file-like object and passed to the <code>wsgi.file_wrapper</code> callable defined by the WSGI server framework. Some WSGI server implementations can make use of optimized system calls (sendfile) to transmit files more efficiently. In other cases this just iterates over chunks that fit into memory. Optional headers such as <code>Content-Length</code> or <code>Content-Type</code> are <em>not</em> set automatically. Use <code>send_file()</code> if possible. See <a class="reference internal" href="https://devdocs.io/bottle~0.12/tutorial#tutorial-static-files">Static Files</a> for details.</dd>
+        <dt>Iterables and generators</dt>
+        <dd>You are allowed to use <code>yield</code> within your callbacks or return an iterable, as long as the iterable yields byte strings, unicode strings, <a class="reference internal" title="bottle.HTTPError" href="https://devdocs.io/bottle~0.12/api#bottle.HTTPError"><code>HTTPError</code></a> or <a class="reference internal" title="bottle.HTTPResponse" href="https://devdocs.io/bottle~0.12/api#bottle.HTTPResponse"><code>HTTPResponse</code></a> instances. Nested iterables are not supported, sorry. Please note that the HTTP status code and the headers are sent to the browser as soon as the iterable yields its first non-empty value. Changing these later has no effect.</dd>
+        </dl>
+        <p>The ordering of this list is significant. You may for example return a subclass of <a class="reference external" title="(in Python v2.7)" href="http://docs.python.org/library/functions.html#str"><code>str</code></a> with a <code>read()</code> method. It is still treated as a string instead of a file, because strings are handled first.</p>
+<p>Copied from Source: https://devdocs.io/bottle~0.12/tutorial</p>
+     </div>
+    </main>
+  </body>
+</html>

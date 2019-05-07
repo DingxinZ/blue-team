@@ -1,0 +1,26 @@
+<main>
+  <section class="registration">
+    <h2>Send a message</h2>
+        <form class="registration-form" action="/send" method="post">
+          <input name="recipientname" type="text" placeholder="recipient" />
+          <textarea name="massage_content" rows="8" cols="80">Message content</textarea>
+          <input value="Send" type="submit" />
+        </form>
+    <!--    <table>
+            <tr>
+                <td>Sender</td>
+                <td>{{allmessage.sender}}</td>
+            </tr>
+            <tr>
+              <tr class="clickable-tr" data-href="{{ url_for('readmessage', messageid=allmessage.topic) }}">
+                <td>Topic</td>
+                <td>{{allmessage.topic}}</td>
+              </tr>
+            <tr>
+                <td>Date</td>
+                <td>{{allmessage.date}}</td>
+            </tr>
+        </table> -->
+      </section>
+    </main>
+  </body>

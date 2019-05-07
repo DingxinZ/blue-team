@@ -1,0 +1,156 @@
+    <main class="content">
+      <aside class="content-sidebar">
+        <nav class="content-nav">
+            <ul>
+              <li>
+                HTML
+                <ul>
+                  <li><a href="/HTML-int">HTML intro</a></li>
+                  <li><a href="/HTML-tut">HTML tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                CSS
+                <ul>
+                  <li><a href="/CSS-int">CSS intro</a></li>
+                  <li><a  href="/CSS-tut">CSS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                JS
+                <ul>
+                  <li><a href="/JS-int">JS intro</a></li>
+                  <li><a href="/JS-tut">JS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                Python/Bottle
+                <ul>
+                  <li><a href="/PB-int">Python/Bottle intro</a></li>
+                  <li><a href="/PB-tut">Python/Bottle tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                PHP
+                <ul>
+                  <li><a href="/PHP-int">PHP intro</a></li>
+                  <li><a href="/PHP-tut">PHP tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQL
+                <ul>
+                  <li><a href="/SQL-int">SQL intro</a></li>
+                  <li><a href="/SQL-tut">SQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                MySQL
+                <ul>
+                  <li><a href="/Mysql-int">MySQL intro</a></li>
+                  <li><a href="/Mysql-tut">MySQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQLite
+                <ul>
+                  <li><a href="/SQLite-int">SQLite intro</a></li>
+                  <li><a href="/SQLite-tut">SQLite tutorial</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </aside>
+      <div class="content-body">
+        <h2 class="western">SQLite Tutorial</h2>
+        <p><a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite </a>is a self-contained, server-less, config-free transactional SQL database engine. Python gained the sqlite3 module all the way back in version 2.5 which means that you can create SQLite database with any current Python without downloading any additional dependencies. Mozilla uses SQLite databases for its popular Firefox browser to store bookmarks and other various pieces of information. In this article you will learn the following:</p>
+        <ul>
+        <li>How to create a SQLite database</li>
+        <li>How to insert data into a table</li>
+        <li>How to edit the data</li>
+        <li>How to delete the data</li>
+        <li>Basic SQL queries</li>
+        </ul>
+        <p>This article will be similar in function to the recent <a href="http://www.blog.pythonlibrary.org/2012/07/01/a-simple-sqlalchemy-0-7-0-8-tutorial/" target="_blank" rel="noopener">SQLAlchemy tutorial</a> that appeared on this site earlier this month. If you want to inspect your database visually, you can use the<a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/" target="_blank" rel="noopener"> SQLite Manager plugin</a> for Firefox or if you like the command line, you can use SQLite&rsquo;s <a href="http://www.sqlite.org/sqlite.html" target="_blank" rel="noopener">command line shell</a><span id="more-1960"></span></p>
+        <h3>How to Create a Database</h3>
+        <p>Creating a database in SQLite is really easy, but the process requires that you know a little SQL to do it. Here&rsquo;s some code that will create a database to hold music albums:</p>
+        <pre class="python"><span style="color: #ff7700; font-weight: bold;">import</span> sqlite3
+        &nbsp;
+        conn = sqlite3.<span style="color: black;">connect</span><span style="color: black;">(</span><span style="color: #483d8b;">"mydatabase.db"</span><span style="color: black;">)</span> <span style="color: #808080; font-style: italic;"></span>
+        &nbsp;
+        cursor = conn.<span style="color: black;">cursor</span><span style="color: black;">(</span><span style="color: black;">)</span>
+        &nbsp;
+        <span style="color: #808080; font-style: italic;"># create a table</span>
+        cursor.<span style="color: black;">execute</span><span style="color: black;">(</span><span style="color: #483d8b;">""</span><span style="color: #483d8b;">"CREATE TABLE albums
+                          (title text, artist text, release_date text,
+                           publisher text, media_type text)
+                       "</span><span style="color: #483d8b;">""</span><span style="color: black;">)</span></pre>
+        <p>First we have to import the <strong>sqlite3</strong> library and create a connection to the database. You can pass it a file path, file name or just use use the special string &ldquo;:memory:&rdquo; to create the database in memory. In our case, we created it on disk in a file called <strong>mydatabase.db</strong>. Next we create a cursor object, which allows you to interact with the database and add records, among other things. Here we use SQL syntax to create a table named <strong>albums</strong> with 5 text fields: title, artist, release_date, publisher and media_type. SQLite only supports five <a href="http://www.sqlite.org/datatype3.html" target="_blank" rel="noopener">data types</a>: null, integer, real, text and blob.</p>
+        <h2>How to INSERT Some Data</h2>
+        <p>Let&rsquo;s build on this code and insert some data into our new table!</p>
+        <pre class="python"><span style="color: #808080; font-style: italic;"># insert some data</span>
+cursor.<span style="color: black;">execute</span><span style="color: black;">(</span><span style="color: #483d8b;">"INSERT INTO albums
+    VALUES ('Glow', 'Andy Hunter', '7/24/2012', 'Xplore Records', 'MP3')"</span><span style="color: black;">)</span>
+        &nbsp;
+        <span style="color: #808080; font-style: italic;"># save data to database</span>
+        conn.<span style="color: black;">commit</span><span style="color: black;">(</span><span style="color: black;">)</span>
+        &nbsp;
+</pre>
+        <p>Here we use the INSERT INTO SQL command to insert a record into our database. Note that each item had to have single quotes around it. This can get complicated when you need to insert strings that include single quotes in them. Anyway, to save the record to the database, we have to <strong>commit</strong> it. The next piece of code shows how add multiple records at once be using the cursor&rsquo;s <strong>executemany</strong> method. Note that we&rsquo;re using question marks (?) instead of string substitution (%s) to insert the values. Using string substitution is NOT safe and should not be used as it can allow <a href="http://en.wikipedia.org/wiki/SQL_injection" target="_blank" rel="noopener">SQL injection</a> attacks to occur. The question mark method is much better and using SQLAlchemy is even better because it does all the escaping for you so you won&rsquo;t have to mess with the annoyances of converting embedded single quotes into something that SQLite will accept.</p>
+        <h3>Updating and Deleting Records</h3>
+        <p>Being able to update your database records is key to keeping your data accurate. If you can&rsquo;t update, then your data will become out of date and pretty useless very quickly. Sometimes you will need to delete rows from your data too. We&rsquo;ll be covering both of those topics in this section. First, let&rsquo;s do an update!</p>
+        <pre class="python"><span style="color: #ff7700; font-weight: bold;">import</span> sqlite3
+        &nbsp;
+        conn = sqlite3.<span style="color: black;">connect</span><span style="color: black;">(</span><span style="color: #483d8b;">"mydatabase.db"</span><span style="color: black;">)</span>
+        cursor = conn.<span style="color: black;">cursor</span><span style="color: black;">(</span><span style="color: black;">)</span>
+        &nbsp;
+        sql = <span style="color: #483d8b;">""</span><span style="color: #483d8b;">"
+        UPDATE albums
+        SET artist = 'John Doe'
+        WHERE artist = 'Andy Hunter'
+        "</span><span style="color: #483d8b;">""</span>
+        cursor.<span style="color: black;">execute</span><span style="color: black;">(</span>sql<span style="color: black;">)</span>
+        conn.<span style="color: black;">commit</span><span style="color: black;">(</span><span style="color: black;">)</span></pre>
+        <p>Here we use SQL&rsquo;s UPDATE command to update out albums table. You can use SET to change a field, so in this case we change the artist field to be &ldquo;John Doe&rdquo; in any record WHERE the artist field is set to &ldquo;Andy Hunter&rdquo;. Wasn&rsquo;t that easy? Note that if you don&rsquo;t commit the changes, then your changes won&rsquo;t be written out to the database. The DELETE command is almost as easy. Let&rsquo;s check that out!</p>
+        <pre class="python"><span style="color: #ff7700; font-weight: bold;">import</span> sqlite3
+        &nbsp;
+        conn = sqlite3.<span style="color: black;">connect</span><span style="color: black;">(</span><span style="color: #483d8b;">"mydatabase.db"</span><span style="color: black;">)</span>
+        cursor = conn.<span style="color: black;">cursor</span><span style="color: black;">(</span><span style="color: black;">)</span>
+        &nbsp;
+        sql = <span style="color: #483d8b;">""</span><span style="color: #483d8b;">"
+        DELETE FROM albums
+        WHERE artist = 'John Doe'
+        "</span><span style="color: #483d8b;">""</span>
+        cursor.<span style="color: black;">execute</span><span style="color: black;">(</span>sql<span style="color: black;">)</span>
+        conn.<span style="color: black;">commit</span><span style="color: black;">(</span><span style="color: black;">)</span></pre>
+        <p>Deleting is even easier than updating. The SQL is only 2 lines! In this case, all we had to do was tell SQLite which table to delete from (albums) and which records to delete using the WHERE clause. Thus is looked for any records that had &ldquo;John Doe&rdquo; in its artist field and deleted it.</p>
+        <h3>Basic SQLite Queries</h3>
+        <p>Queries in SQLite are pretty much the same as what you&rsquo;d use for other databases, such as MySQL or Postgres. You just use normal SQL syntax to run the queries and then have the cursor object execute the SQL. Here are a few examples:</p>
+        <pre class="python"><span style="color: #ff7700; font-weight: bold;">import</span> sqlite3
+        &nbsp;
+        conn = sqlite3.<span style="color: black;">connect</span><span style="color: black;">(</span><span style="color: #483d8b;">"mydatabase.db"</span><span style="color: black;">)</span>
+        <span style="color: #808080; font-style: italic;">#conn.row_factory = sqlite3.Row</span>
+        cursor = conn.<span style="color: black;">cursor</span><span style="color: black;">(</span><span style="color: black;">)</span>
+        &nbsp;
+        sql = <span style="color: #483d8b;">"SELECT * FROM albums WHERE artist=?"</span>
+        cursor.<span style="color: black;">execute</span><span style="color: black;">(</span>sql, <span style="color: black;">[</span><span style="color: black;">(</span><span style="color: #483d8b;">"Red"</span><span style="color: black;">)</span><span style="color: black;">]</span><span style="color: black;">)</span>
+        <span style="color: #ff7700; font-weight: bold;">print</span> cursor.<span style="color: black;">fetchall</span><span style="color: black;">(</span><span style="color: black;">)</span>  <span style="color: #808080; font-style: italic;"># or use fetchone()</span>
+        &nbsp;
+        <span style="color: #ff7700; font-weight: bold;">print</span> <span style="color: #483d8b;">"<span style="color: #000099; font-weight: bold;">\n</span>Here's a listing of all the records in the table:<span style="color: #000099; font-weight: bold;">\n</span>"</span>
+        <span style="color: #ff7700; font-weight: bold;">for</span> row <span style="color: #ff7700; font-weight: bold;">in</span> cursor.<span style="color: black;">execute</span><span style="color: black;">(</span><span style="color: #483d8b;">"SELECT rowid, *
+          FROM albums ORDER BY artist"</span><span style="color: black;">)</span>:
+            <span style="color: #ff7700; font-weight: bold;">print</span> row
+        &nbsp;
+        <span style="color: #ff7700; font-weight: bold;">print</span> <span style="color: #483d8b;">"<span style="color: #000099; font-weight: bold;">\n</span>Results from a LIKE query:<span style="color: #000099; font-weight: bold;">\n</span>"</span>
+        sql = <span style="color: #483d8b;">""</span><span style="color: #483d8b;">"
+        SELECT * FROM albums
+        WHERE title LIKE 'The%'"</span><span style="color: #483d8b;">""</span>
+        cursor.<span style="color: black;">execute</span><span style="color: black;">(</span>sql<span style="color: black;">)</span>
+        <span style="color: #ff7700; font-weight: bold;">print</span> cursor.<span style="color: black;">fetchall</span><span style="color: black;">(</span><span style="color: black;">)</span></pre>
+        <p>The first query we execute is a <strong>SELECT *</strong> which means that we want to select all the records that match the artist name we pass in, which in this case is &ldquo;Red&rdquo;. Next we execute the SQL and use fetchall() to return all the results. You can also use fetchone() to grab the first result. You&rsquo;ll also notice that there&rsquo;s a commented out section related to a mysterious <strong>row_factory</strong>. If you un-comment that line, the results will be returned as Row objects that are kind of like Python dictionaries and give you access to the row&rsquo;s fields just like a dictionary. However, you cannot do item assignment with a Row object.</p>
+        <p>The second query is much like the first, but it returns every record in the database and orders the results by the artist name in ascending order. This also demonstrates how we can loop over the results. The last query shows how to use SQL&rsquo;s LIKE command to search for partial phrases. In this case, we do a search of the entire table for titles that start with &ldquo;The&rdquo;. The percent sign (%) is a wildcard operator.</p>
+        <p>https://www.blog.pythonlibrary.org/2012/07/18/python-a-simple-step-by-step-sqlite-tutorial/</p>
+     </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+    <main class="content">
+      <aside class="content-sidebar">
+        <nav class="content-nav">
+            <ul>
+              <li>
+                HTML
+                <ul>
+                  <li><a href="/HTML-int">HTML intro</a></li>
+                  <li><a href="/HTML-tut">HTML tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                CSS
+                <ul>
+                  <li><a href="/CSS-int">CSS intro</a></li>
+                  <li><a  href="/CSS-tut">CSS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                JS
+                <ul>
+                  <li><a href="/JS-int">JS intro</a></li>
+                  <li><a href="/JS-tut">JS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                Python/Bottle
+                <ul>
+                  <li><a href="/PB-int">Python/Bottle intro</a></li>
+                  <li><a href="/PB-tut">Python/Bottle tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                PHP
+                <ul>
+                  <li><a href="/PHP-int">PHP intro</a></li>
+                  <li><a href="/PHP-tut">PHP tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQL
+                <ul>
+                  <li><a href="/SQL-int">SQL intro</a></li>
+                  <li><a href="/SQL-tut">SQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                MySQL
+                <ul>
+                  <li><a href="/Mysql-int">MySQL intro</a></li>
+                  <li><a href="/Mysql-tut">MySQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQLite
+                <ul>
+                  <li><a href="/SQLite-int">SQLite intro</a></li>
+                  <li><a href="/SQLite-tut">SQLite tutorial</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </aside>
+      <div class="content-body">
+        <h2>Your First JavaScript Code</h2>
+        <p>Let us take a sample example to print out "Hello World". We added an optional HTML comment that surrounds our JavaScript code. This is to save our code from a browser that does not support JavaScript. The comment ends with a "//--&gt;". Here "//" signifies a comment in JavaScript, so we add that to prevent a browser from reading the end of the HTML comment as a piece of JavaScript code. Next, we call a function <strong>document.write</strong> which writes a string into our HTML document.</p>
+        <p>This function can be used to write text, HTML, or both. Take a look at the following code.</p>
+        <pre>
+&lt;html&gt;
+   &lt;body&gt;
+      &lt;script language = "javascript" type = "text/javascript"&gt;
+         &lt;!--
+            document.write("Hello World!")
+         //--&gt;
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <p>This code will produce the following result &minus;</p>
+        <pre >Hello World!</pre>
+        <h2 >Whitespace and Line Breaks</h2>
+        <p>JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use spaces, tabs, and newlines freely in your program and you are free to format and indent your programs in a neat and consistent way that makes the code easy to read and understand.</p>
+        <h2 >Comments in JavaScript</h2>
+        <p>JavaScript supports both C-style and C++-style comments, Thus &minus;</p>
+        <p>Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.</p>
+        <p>Any text between the characters /* and */ is treated as a comment. This may span multiple lines.</p>
+        <p>JavaScript also recognizes the HTML comment opening sequence &lt;!--. JavaScript treats this as a single-line comment, just as it does the // comment.</p>
+        <p>The HTML comment closing sequence --&gt; is not recognized by JavaScript so it should be written as //--&gt;.</p>
+        <h2>JavaScript Variables</h2>
+        <p>Like many other programming languages, JavaScript has variables. Variables can be thought of as named containers. You can place data into these containers and then refer to the data simply by naming the container.</p>
+        <p>Before you use a variable in a JavaScript program, you must declare it. Variables are declared with the <strong>var</strong> keyword as follows.</p>
+        <pre>&lt;script type = "text/javascript"&gt;
+           &lt;!--
+              var money;
+              var name;
+           //--&gt;
+        &lt;/script&gt;</pre>
+        <p>You can also declare multiple variables with the same <strong>var</strong> keyword as follows &minus;</p>
+        <pre>
+&lt;script type = "text/javascript"&gt;
+   &lt;!--
+      var money, name;
+   //--&gt;
+&lt;/script&gt;</pre>
+        <p>Storing a value in a variable is called <strong>variable initialization</strong>. You can do variable initialization at the time of variable creation or at a later point in time when you need that variable.</p>
+        <p>For instance, you might create a variable named <strong>money</strong> and assign the value 2000.50 to it later. For another variable, you can assign a value at the time of initialization as follows.</p>
+        <pre>
+&lt;script type = "text/javascript"&gt;
+   &lt;!--
+      var name = "Ali";
+      var money;
+      money = 2000.50;
+   //--&gt;
+&lt;/script&gt;</pre>
+        <p><strong>Note</strong> &minus; Use the <strong>var</strong> keyword only for declaration or initialization, once for the life of any variable name in a document. You should not re-declare same variable twice.</p>
+        <p>JavaScript is <strong>untyped</strong> language. This means that a JavaScript variable can hold a value of any data type. Unlike many other languages, you don't have to tell JavaScript during variable declaration what type of value the variable will hold. The value type of a variable can change during the execution of a program and JavaScript takes care of it automatically.</p>
+        <h2>JavaScript - Functions</h2>
+        <p >A function is a group of reusable code which can be called anywhere in your program. This eliminates the need of writing the same code again and again. It helps programmers in writing modular codes. Functions allow a programmer to divide a big program into a number of small and manageable functions.</p>
+        <h2 >Function Definition</h2>
+        <p>Before we use a function, we need to define it. The most common way to define a function in JavaScript is by using the <strong>function</strong> keyword, followed by a unique function name, a list of parameters (that might be empty), and a statement block surrounded by curly braces.</p>
+        <h2 >Calling a Function</h2>
+        <p>To invoke a function somewhere later in the script, you would simply need to write the name of that function</p>
+        <h2> JavaScript - Objects Overview</h2>
+        <p>JavaScript is an Object Oriented Programming (OOP) language. A programming language can be called object-oriented if it provides four basic capabilities to developers &minus;</p>
+        <p><strong>Encapsulation</strong> &minus; the capability to store related information, whether data or methods, together in an object.</p>
+        <p><strong>Aggregation</strong> &minus; the capability to store one object inside another object.</p>
+        <p><strong>Inheritance</strong> &minus; the capability of a class to rely upon another class (or number of classes) for some of its properties and methods.</p>
+        <p><strong>Polymorphism</strong> &minus; the capability to write one function or method that works in a variety of different ways.</p>
+        <p>Objects are composed of attributes. If an attribute contains a function, it is considered to be a method of the object, otherwise the attribute is considered a property.</p>
+        <h2  >Object Properties</h2>
+        <p>Object properties can be any of the three primitive data types, or any of the abstract data types, such as another object. Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page.</p>
+        <p>The syntax for adding a property to an object is &minus;</p>
+        <pre >objectName.objectProperty = propertyValue;</pre>
+        <p><strong>For example</strong> &minus; The following code gets the document title using the <strong>"title"</strong> property of the <strong>document</strong> object.</p>
+        <pre >var str = document.title;</pre>
+        <h2 >Object Methods</h2>
+        <p>Methods are the functions that let the object do something or let something be done to it. There is a small difference between a function and a method &ndash; at a function is a standalone unit of statements and a method is attached to an object and can be referenced by the <strong>this</strong> keyword.</p>
+        <p>Methods are useful for everything from displaying the contents of the object to the screen to performing complex mathematical operations on a group of local properties and parameters.</p>
+        <p><strong>For example</strong> &minus; Following is a simple example to show how to use the <strong>write()</strong> method of document object to write any content on the document.</p>
+        <pre >document.write("This is test");</pre>
+<p>Copied from Source: https://www.tutorialspoint.com/javascript/javascript_overview.htm</p>
+     </div>
+    </main>
+  </body>
+</html>

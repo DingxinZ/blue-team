@@ -1,0 +1,90 @@
+    <main class="content">
+      <aside class="content-sidebar">
+        <nav class="content-nav">
+            <ul>
+              <li>
+                HTML
+                <ul>
+                  <li><a href="/HTML-int">HTML intro</a></li>
+                  <li><a href="/HTML-tut">HTML tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                CSS
+                <ul>
+                  <li><a href="/CSS-int">CSS intro</a></li>
+                  <li><a  href="/CSS-tut">CSS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                JS
+                <ul>
+                  <li><a href="/JS-int">JS intro</a></li>
+                  <li><a href="/JS-tut">JS tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                Python/Bottle
+                <ul>
+                  <li><a href="/PB-int">Python/Bottle intro</a></li>
+                  <li><a href="/PB-tut">Python/Bottle tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                PHP
+                <ul>
+                  <li><a href="/PHP-int">PHP intro</a></li>
+                  <li><a href="/PHP-tut">PHP tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQL
+                <ul>
+                  <li><a href="/SQL-int">SQL intro</a></li>
+                  <li><a href="/SQL-tut">SQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                MySQL
+                <ul>
+                  <li><a href="/Mysql-int">MySQL intro</a></li>
+                  <li><a href="/Mysql-tut">MySQL tutorial</a></li>
+                </ul>
+              </li>
+              <li>
+                SQLite
+                <ul>
+                  <li><a href="/SQLite-int">SQLite intro</a></li>
+                  <li><a href="/SQLite-tut">SQLite tutorial</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </aside>
+      <div class="content-body">
+        <h2>Bottle: Python Web Framework</h2>
+        <p>Bottle is a fast, simple and lightweight <a href="http://www.wsgi.org/">WSGI</a> micro web-framework for <a href="http://python.org/">Python</a>. It is distributed as a single file module and has no dependencies other than the <a href="http://docs.python.org/library/">Python Standard Library</a>.</p>
+        <p><strong>Routing:</strong> Requests to function-call mapping with support for clean and dynamic URLs.</p>
+        <p><strong>Templates:</strong> Fast and pythonic <a href="https://devdocs.io/bottle~0.12/tutorial#tutorial-templates">built-in template engine</a> and support for <a href="http://www.makotemplates.org/">mako</a>, <a href="http://jinja.pocoo.org/">jinja2</a> and <a href="http://www.cheetahtemplate.org/">cheetah</a> templates.</p>
+        <p><strong>Utilities:</strong> Convenient access to form data, file uploads, cookies, headers and other HTTP-related metadata.</p>
+        <p><strong>Server:</strong> Built-in HTTP development server and support for <a href="http://pythonpaste.org/">paste</a>, <a href="https://github.com/william-os4y/fapws3">fapws3</a>, <a href="https://github.com/jonashaag/bjoern">bjoern</a>, <a href="http://code.google.com/intl/en-US/appengine/">Google App Engine</a>, <a href="http://www.cherrypy.org/">cherrypy</a> or any other <a href="http://www.wsgi.org/">WSGI</a> capable HTTP server.</p>
+        <h2>Quickstart: &ldquo;Hello World&rdquo;</h2>
+        <p>This tutorial assumes you have Bottle either <a href="https://devdocs.io/bottle~0.12/tutorial#installation">installed</a> or copied into your project directory. Let&rsquo;s start with a very basic &ldquo;Hello World&rdquo; example:</p>
+        <pre class=" language-python" data-language="python"><span class="token keyword">from</span> bottle <span class="token keyword">import</span> route<span class="token punctuation">,</span> run
+
+        @route<span class="token punctuation">(</span><span class="token string">'/hello'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Hello World!"</span>
+
+        run<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">'localhost'</span><span class="token punctuation">,</span> port<span class="token operator">=</span><span class="token number">8080</span><span class="token punctuation">,</span> debug<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        </pre>
+        <p>This is it. Run this script, visit <a href="http://localhost:8080/hello">http://localhost:8080/hello</a> and you will see &ldquo;Hello World!&rdquo; in your browser. Here is how it works:</p>
+        <p>The <code class="western"><a href="https://devdocs.io/bottle~0.12/api#bottle.route">route()</a></code> decorator binds a piece of code to an URL path. In this case, we link the <code class="western">/hello</code> path to the <code class="western">hello()</code> function. This is called a <code class="western">route</code> (hence the decorator name) and is the most important concept of this framework. You can define as many routes as you want. Whenever a browser requests an URL, the associated function is called and the return value is sent back to the browser. Its as simple as that.</p>
+        <p>The <code class="western"><a href="https://devdocs.io/bottle~0.12/api#bottle.run">run()</a></code> call in the last line starts a built-in development server. It runs on <code class="western">localhost</code> port <code class="western">8080</code> and serves requests until you hit <code class="western">Control-c</code>. You can switch the server backend later, but for now a development server is all we need. It requires no setup at all and is an incredibly painless way to get your application up and running for local tests.</p>
+        <p>The <a href="https://devdocs.io/bottle~0.12/tutorial#tutorial-debugging">Debug Mode</a> is very helpful during early development, but should be switched off for public applications. Keep that in mind.</p>
+        <p>Of course this is a very simple example, but it shows the basic concept of how applications are built with Bottle. Continue reading and you&rsquo;ll see what else is possible.</p>
+<p>Copied from Source: https://devdocs.io/bottle~0.12/tutorial</p>
+     </div>
+    </main>
+  </body>
+</html>

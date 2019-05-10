@@ -108,10 +108,10 @@ def check_muted(port, username):
 
 
 if len(sys.argv) == 5:
-    host = argv[1]
-    port = argv[2]
-    database = argv[3]
-    log_file = argv[4]
+    host = sys.argv[1]
+    port = sys.argv[2]
+    database = sys.argv[3]
+    log_file = sys.argv[4]
 
 db_url = 'http://' + host + ':' + database
 # Run the server

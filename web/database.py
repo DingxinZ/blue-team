@@ -259,9 +259,9 @@ def enable_debugger():
         debug = True
 
 if len(sys.argv) == 4:
-    host = argv[1]
-    port = argv[2]
-    database = argv[3]
+    host = sys.argv[1]
+    port = sys.argv[2]
+    database = sys.argv[3]
 
 
 

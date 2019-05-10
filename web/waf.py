@@ -97,9 +97,9 @@ def enable_debugger():
 
 
 if len(sys.argv) == 4:
-    host = argv[1]
-    port = argv[2]
-    reprot_file = argv[3]
+    host = sys.argv[1]
+    port = sys.argv[2]
+    reprot_file = sys.argv[3]
 
 
 

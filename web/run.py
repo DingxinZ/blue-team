@@ -9,6 +9,7 @@ import model
 import view
 import controller
 import userid
+import sys
 #-----------------------------------------------------------------------------
 
 '''
@@ -27,6 +28,10 @@ host = 'localhost'
 
 # Test port, change to the appropriate port to host
 port = 8080
+
+if len(sys.argv) == 7:
+    host = sys.argv[1]
+    port = sys.argv[2]
 
 # Turn this off for production
 debug = True

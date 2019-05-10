@@ -1,7 +1,7 @@
   <main>
     <section class="registration">
       <h2>All messages</h2>
-      <table>
+      <table name="allmessages_table">
         <tr>
           <td>From</td>
           <td>To</td>

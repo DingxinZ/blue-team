@@ -1,6 +1,20 @@
 from bottle import route, get, post, request, redirect, static_file
 
 import model
+import requests
+import sys
+
+waf_url = 'http://localhost:8081/waf/'
+if len(sys.argv) == 7:
+    port = sys.argv[2]
+    waf_host = sys.argv[3]
+    waf_port = sys.argv[4]
+    waf_url = 'http://' + waf_host + ':' + waf_port + '/waf/'
+def send_request(path, input_from, string_in):
+    r = requests.post(waf_url + path + port + ':' + input_from + string_in)
+    r = r.content.decode()
+    return r
+
 
 # sql.SQLDatabase
 
@@ -60,19 +74,43 @@ def post_login():
     username = request.forms.get('username')
     password = request.forms.get('password')
 
+    a = send_request('detect/', 'login_username/', username)
+    b = send_request('detect/', 'login_password/', password)
+
+    #print(a.content.decode())
+    if a != "True":
+        return model.error_page(a)
+    if b != "True":
+        return model.error_page(b)
+
     # Call the appropriate method
     return model.login_check(username, password)
 
 @post('/register')
 def post_register():
     # Handle the form processing
+    #a = requests.post('http://localhost:8081/waf/detect'+)
+
     username = request.forms.get('username')
     password = request.forms.get('password')
     password2 = request.forms.get('password2')
+    a = send_request('detect/', 'register_username/', username)
+    b = send_request('detect/', 'register_password/', password)
+
+    c = send_request('password/', 'register_password/', password)
+
+    #print(a.content.decode())
+    if a != "True":
+        return model.error_page(a)
+    if b != "True":
+        return model.error_page(b)
+    if c != "True":
+        return model.error_page(c)
+
     if password == password2:
         return model.create_account(username, password)
     else:
-        return model.index_page()
+        return model.error_page("Two passwords not same")
     # Call the appropriate method
 
 @post('/send')
@@ -80,6 +118,13 @@ def post_message():
     # Handle the form processing
     recipientname = request.forms.get('recipientname')
     massage_content = request.forms.get('massage_content')
+
+    a = send_request('detect/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
+    b = send_request('detect/', 'post_message_massage_content_from_user: '+ request.get_cookie("username") + '/', massage_content)
+    if a != "True":
+        return model.error_page(a)
+    if b != "True":
+        return model.error_page(b)
 
     # Call the appropriate method
     return model.insert_message(recipientname, massage_content)
@@ -132,11 +177,17 @@ def get_banuser():
 @post('/ban')
 def post_banuser():
     username = request.forms.get('username')
+    a = send_request('detect/', 'banuser_username/', username)
+    if a != "True":
+        return model.error_page(a)
     return model.ban(username)
 
 @post('/Lift')
-def post_banuser():
+def post_liftuser():
     username = request.forms.get('username')
+    a = send_request('detect/', 'liftuser_username/', username)
+    if a != "True":
+        return model.error_page(a)
     return model.lift(username)
 
 

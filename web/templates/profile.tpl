@@ -1,6 +1,6 @@
 <main>
   <section class="registration">
-    <h2>Username = {{rows}}</h2>
+    <h2 name = "profile">Username = {{rows}}</h2>
   </section>
 </main>
 </body>

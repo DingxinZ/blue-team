@@ -9,7 +9,7 @@ import sqlite3
 class SQLDatabase():
 
     # Get the database running
-    def __init__(self, database_arg=":memory:"):
+    def __init__(self, database_arg="database.db"):
         self.conn = sqlite3.connect(database_arg)
         self.cur = self.conn.cursor()
 
@@ -47,7 +47,9 @@ class SQLDatabase():
     def database_setup(self, admin_password='admin'):
 
         # Clear the database if needed
-        self.execute("DROP TABLE IF EXISTS Users")
+        self.execute("""DROP TABLE IF EXISTS Users;
+        DROP TABLE IF EXISTS Messages
+        """)
         self.commit()
 
         # Create the users table

@@ -1,4 +1,7 @@
+from bottle import route, get, post, request, response
 import random
+import json
+import sys
 '''
     Our Model class
     This should control the actual "logic" of your website
@@ -9,30 +12,81 @@ import random
 import view
 import sql
 import userid
+import time
+import requests
+
 
 database = sql.SQLDatabase()
-database.database_setup()
+#database.database_setup()
 theuser = userid.userid()
 print("!!! ")
+api_url = 'http://localhost:8082/api/'
 
 
 # Initialise our views, all arguments are defaults
 page_view = view.View()
 
+if len(sys.argv) == 7:
+    port = sys.argv[2]
+    api_host = sys.argv[5]
+    api_port = sys.argv[6]
+    api_url = 'http://' + api_host + ':' + api_port + '/api/'
+
+
+a = requests.post(api_url + 'setup/' + port)
+print(a.content.decode())
+
+def checkheader():
+    print("start")
+    try:
+        hasloginvalue = request.get_cookie("logged_in")
+        print("value", hasloginvalue)
+        if "True" == hasloginvalue:
+            haslogin = True
+            if request.get_cookie("username") == "admin":
+                print(request.get_cookie("username"))
+                isadmin = True
+            else:
+                print("fail",request.get_cookie("username"))
+                isadmin = False
+        else:
+            haslogin = False
+    except:
+        print("except")
+        haslogin = False
+    if haslogin:
+        if isadmin:
+            return "headeradmin"
+        else:
+            return "headerloggedin"
+
+    else:
+        return "header"
 
 def register_page():
     return page_view("register")
+
+
+def error_page(err_str):
+    return page_view("invalid", checkheader(), reason=err_str)
 #-----------------------------------------------------------------------------
 # Index
 #-----------------------------------------------------------------------------
 
 def index_page():
-    if theuser.logged_in:
-        print(theuser.logged_in)
-        return page_view("index", "headerloggedin")
+    try:
+        request.get_cookie("username")
+        print("aha")
+        haslogin = request.get_cookie("logged_in")
+    except:
+        print("haa")
+        haslogin = "False"
+    if haslogin == "True":
+        #print(theuser.logged_in)
+        return page_view("index", checkheader())
     else:
-        print(theuser.logged_in)
-        return page_view("index", theuser.userheader)
+        #print(theuser.logged_in)
+        return page_view("index", checkheader())
 
 #-----------------------------------------------------------------------------
 # Login
@@ -47,7 +101,10 @@ def login_page():
 def login_check(username, password):
     # By default assume bad creds
     print(username, password)
-    if database.check_credentials(username, password):
+    a = requests.post(api_url + 'check_credentials/'+ port + '/' + username + '/' + password)
+
+    #if database.check_credentials(username, password):
+    if a.content.decode() == "Valid username and password":
         login = True
     else:
         login = False
@@ -62,23 +119,31 @@ def login_check(username, password):
     #    login = False
 
     if login:
+        response.set_cookie("username", username, path="/")
+        response.set_cookie("logged_in", "True", path="/")
+        time.sleep(1)
+        #print(request.getcookie("logged_in"))
+        r = request.get_cookie("logged_in")
+        print("the new cookie is", r)
         if username == "admin":
             theuser.username = username
             theuser.isadmin = True
             theuser.userheader = "headeradmin"
+            return page_view("index", "headeradmin")
         else:
             theuser.username = username
             theuser.logged_in = True
             theuser.userheader = "headerloggedin"
-        return page_view("index", theuser.userheader)
+            return page_view("index", "headerloggedin")
     else:
-        return page_view("invalid", reason=err_str)
+        return page_view("invalid", checkheader(), reason=err_str)
 
 
 
 def create_account(username, password):
 
-    database.add_user(username, password, 1, 0)
+    requests.post(api_url + 'add_user/' + port + '/' + username + '/' + password)
+    #database.add_user(username, password, 1, 0)
 
     return login_page()
 
@@ -86,7 +151,9 @@ def create_account(username, password):
 
 
 def insert_message(recipientname, massage_content):
-    database.insert_message(theuser.username, recipientname, massage_content)
+
+    requests.post(api_url + 'insert_message/' + port + '/' + request.get_cookie("username") + '/' + recipientname + '/' + massage_content)
+    #database.insert_message(request.get_cookie("username"), recipientname, massage_content)
 
 
     return send_message()
@@ -99,110 +166,123 @@ def about_page():
     return page_view("about", garble=about_garble())
 
 def send_message():
-    if database.check_muted(theuser.username):
-        return page_view("sendmessage", theuser.userheader)
+    a = requests.post(api_url + 'check_muted/' + port + '/' + request.get_cookie("username"))
+    #if database.check_muted(request.get_cookie("username")):
+    if a.content.decode() == 'True':
+        return page_view("sendmessage", checkheader())
     else:
-        return page_view("index", theuser.userheader)
+        return page_view("index", checkheader())
 
 def message_box():
-    data = database.get_all_message(theuser.username)
+    data = requests.post(api_url + 'get_all_message/' + port + '/' + request.get_cookie("username"))
+    data = json.loads(data.content)
+    #data = database.get_all_message(request.get_cookie("username"))
     print(data)
     #return page_view("sendmessage", "headerloggedin")
-    return page_view.with_table( "messagebox", theuser.userheader, "tailer", data)
+    return page_view.with_table( "messagebox", checkheader(), "tailer", data)
     #return page_view("messagebox")
 
 def allmessages():
-    data = database.get_allmessages()
+    data = requests.post(api_url + 'get_allmessages/' + port)
+    data = json.loads(data.content)
+    #data = database.get_allmessages()
 
-    return page_view.with_table( "allmessages", theuser.userheader, "tailer", data)
+    return page_view.with_table( "allmessages", checkheader(), "tailer", data)
 
 def banuser():
-    return page_view("banuser", theuser.userheader)
+    return page_view("banuser", checkheader())
 
 def ban(username):
-    database.ban(username)
-    return page_view("banuser", theuser.userheader)
+    requests.post(api_url + 'ban/' + port + '/' + username)
+
+    #database.ban(username)
+    return page_view("banuser", checkheader())
 
 def lift(username):
-    database.lift(username)
-    return page_view("banuser", theuser.userheader)
+    requests.post(api_url + 'lift/' + port + '/' + username)
+    #database.lift(username)
+    return page_view("banuser", checkheader())
 
 
 def logout():
     theuser.userheader = "header"
     theuser.logged_in = False
     theuser.isadmin = False
-    return page_view("index", theuser.userheader)
+    response.set_cookie("logged_in", "False", path="/")
+    #print(request.get_cookie("again the new cookie is", r))
+    #print(a)
+    time.sleep(1)
+    return page_view("index", "header")
 
 
 
 def profile():
     username = theuser.username
-    return page_view.profile(username,theuser.userheader)
+    return page_view.profile(request.get_cookie("username"),checkheader())
 
 
 def frontend():
-    return page_view("Front-end", theuser.userheader)
+    return page_view("Front-end", checkheader())
 
 def backend():
-    return page_view("Back-end", theuser.userheader)
+    return page_view("Back-end", checkheader())
 
 def thedatabase():
-    return page_view("Database", theuser.userheader)
+    return page_view("Database", checkheader())
 
 def html_int():
-    return page_view("HTML-int", theuser.userheader)
+    return page_view("HTML-int", checkheader())
 
 def html_tut():
-    return page_view("HTML-tut", theuser.userheader)
+    return page_view("HTML-tut", checkheader())
     if theuser.logged_in:
         print(theuser.logged_in)
-        return page_view("HTML-tut", theuser.userheader)
+        return page_view("HTML-tut", checkheader())
     else:
         print(theuser.logged_in)
         return page_view("HTML-tut")
 
 def css_int():
-    return page_view("CSS-int", theuser.userheader)
+    return page_view("CSS-int", checkheader())
 
 def css_tut():
-    return page_view("CSS-tut", theuser.userheader)
+    return page_view("CSS-tut", checkheader())
 
 def js_int():
-    return page_view("JS-int", theuser.userheader)
+    return page_view("JS-int", checkheader())
 
 def js_tut():
-    return page_view("JS-tut", theuser.userheader)
+    return page_view("JS-tut", checkheader())
 
 def php_int():
-    return page_view("PHP-int", theuser.userheader)
+    return page_view("PHP-int", checkheader())
 
 def php_tut():
-    return page_view("PHP-tut", theuser.userheader)
+    return page_view("PHP-tut", checkheader())
 
 def pb_int():
-    return page_view("PB-int", theuser.userheader)
+    return page_view("PB-int", checkheader())
 
 def pb_tut():
-    return page_view("PB-tut", theuser.userheader)
+    return page_view("PB-tut", checkheader())
 
 def sql_int():
-    return page_view("SQL-int", theuser.userheader)
+    return page_view("SQL-int", checkheader())
 
 def sql_tut():
-    return page_view("SQL-tut", theuser.userheader)
+    return page_view("SQL-tut", checkheader())
 
 def sqlite_int():
-    return page_view("SQLite-int", theuser.userheader)
+    return page_view("SQLite-int", checkheader())
 
 def sqlite_tut():
-    return page_view("SQLite-tut", theuser.userheader)
+    return page_view("SQLite-tut", checkheader())
 
 def mysql_int():
-    return page_view("Mysql-int", theuser.userheader)
+    return page_view("Mysql-int", checkheader())
 
 def mysql_tut():
-    return page_view("Mysql-tut", theuser.userheader)
+    return page_view("Mysql-tut", checkheader())
 
 
 

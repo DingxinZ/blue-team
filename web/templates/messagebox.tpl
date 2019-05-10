@@ -1,7 +1,7 @@
   <main>
     <section class="registration">
       <h2>Message box</h2>
-      <table>
+      <table name="inbox_table">
         <tr>
           <td>From</td>
           <td>Message content</td>

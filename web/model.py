@@ -38,6 +38,7 @@ time.sleep(5)
 for _ in range(1000):
     try:
         a = requests.post(api_url + 'setup/' + port)
+        break
     except:
         time.sleep(1)
 print(a.content.decode())

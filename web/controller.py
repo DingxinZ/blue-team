@@ -75,8 +75,8 @@ def post_login():
     username = request.forms.get('username')
     password = request.forms.get('password')
 
-    a = send_request('detect_from_un_and_pw/', 'login_username/', username)
-    b = send_request('detect_from_un_and_pw/', 'login_password/', password)
+    a = send_request('detectunandpw/', 'login_username/', username)
+    b = send_request('detectunandpw/', 'login_password/', password)
 
     #print(a.content.decode())
     if a != "True":
@@ -95,8 +95,8 @@ def post_register():
     username = request.forms.get('username')
     password = request.forms.get('password')
     password2 = request.forms.get('password2')
-    a = send_request('detect_from_un_and_pw/', 'register_username/', username)
-    b = send_request('detect_from_un_and_pw/', 'register_password/', password)
+    a = send_request('detectunandpw/', 'register_username/', username)
+    b = send_request('detectunandpw/', 'register_password/', password)
 
     c = send_request('password/', 'register_password/', password)
 
@@ -120,7 +120,7 @@ def post_message():
     recipientname = request.forms.get('recipientname')
     massage_content = request.forms.get('massage_content')
 
-    a = send_request('detect_from_un_and_pw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
+    a = send_request('detectunandpw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
     b = send_request('detect/', 'post_message_massage_content_from_user: '+ request.get_cookie("username") + '/', massage_content)
     if a != "True":
         return model.error_page(a)
@@ -178,7 +178,7 @@ def get_banuser():
 @post('/ban')
 def post_banuser():
     username = request.forms.get('username')
-    a = send_request('detect_from_un_and_pw/', 'banuser_username/', username)
+    a = send_request('detectunandpw/', 'banuser_username/', username)
     if a != "True":
         return model.error_page(a)
     return model.ban(username)
@@ -186,7 +186,7 @@ def post_banuser():
 @post('/Lift')
 def post_liftuser():
     username = request.forms.get('username')
-    a = send_request('detect_from_un_and_pw/', 'liftuser_username/', username)
+    a = send_request('detectunandpw/', 'liftuser_username/', username)
     if a != "True":
         return model.error_page(a)
     return model.lift(username)

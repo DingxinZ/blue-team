@@ -34,13 +34,13 @@ def detect_attack(input_from, string_in):
         for attack in attacks:
             if re.search(attack, string_in) is not None:
                 report_attack(input_from, attack, origininput)
-                return "Stop attacking our website."
+                return "Stop attacking our website. Don't put " + attack + "in message"
 
         return "True"
     print("debugging")
     return "False"
 
-@post('/waf/detect_from_un_and_pw/<input_from:path>/<string_in:path>')
+@post('/waf/detectunandpw/<input_from:path>/<string_in:path>')
 def detect_attack_from_usrname_and_pw(input_from, string_in):
     print("getit")
     print(string_in)
@@ -53,12 +53,7 @@ def detect_attack_from_usrname_and_pw(input_from, string_in):
                 report_attack(input_from, attack, origininput)
                 return "Stop attacking our website."
 
-        inj_str = ['\'', '-', ' ', '<','>','script']
-        for word in inj_str:
-            if word in string_in:
-                print(word)
-                #report_attack(input_from, word, origininput)
-                return "Don't include \'" + word + "\' in your username or password."
+
         print("noattack")
         return "True"
     print("debugging")
@@ -77,6 +72,14 @@ def verify_password(input_from, password):
     if not any(c in string.ascii_uppercase for c in password):
         print("Password must contain at least one uppercase character")
         return "Password must contain at least one uppercase character"
+
+    inj_str = ['\'', '-', ' ', '<','>','script']
+    for word in inj_str:
+        if word in string_in:
+            print(word)
+            #report_attack(input_from, word, origininput)
+            return "Don't include \'" + word + "\' in your username or password."
+
     print("password valid")
     return 'True'
 

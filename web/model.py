@@ -16,6 +16,7 @@ import time
 import requests
 
 
+
 database = sql.SQLDatabase()
 #database.database_setup()
 theuser = userid.userid()
@@ -33,8 +34,12 @@ if len(sys.argv) == 8:
     api_url = 'http://' + api_host + ':' + api_port + '/api/'
     page_view.template_path = sys.argv[7]
 
-
-a = requests.post(api_url + 'setup/' + port)
+time.sleep(5)
+for _ in range(1000):
+    try:
+        a = requests.post(api_url + 'setup/' + port)
+    except:
+        time.sleep(1)
 print(a.content.decode())
 
 def checkheader():

@@ -52,16 +52,16 @@ class View():
     def with_table(self, filename, header, tailer, result):
         #template = self.load_template(filename)
         if filename == "messagebox":
-            rendered_template = template(template + 'messagebox', rows=result)
+            rendered_template = template(self.template_path + 'messagebox', rows=result)
         else:
-            rendered_template = template(template + 'allmessages', rows=result)
+            rendered_template = template(self.template_path + 'allmessages', rows=result)
 
         rendered_template = self.load_template(header) + rendered_template
         rendered_template = rendered_template + self.load_template(tailer)
         return rendered_template
 
     def profile(self, username, header, tailer="tailer"):
-        rendered_template = template(template + 'profile', rows=username)
+        rendered_template = template(self.template_path + 'profile', rows=username)
         rendered_template = self.load_template(header) + rendered_template
         rendered_template = rendered_template + self.load_template(tailer)
         return rendered_template

@@ -29,7 +29,7 @@ host = 'localhost'
 # Test port, change to the appropriate port to host
 port = 8080
 
-if len(sys.argv) == 7:
+if len(sys.argv) == 8:
     host = sys.argv[1]
     port = sys.argv[2]
 

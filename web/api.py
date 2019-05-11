@@ -2,6 +2,7 @@ from bottle import run, request, post, get
 import string
 import requests
 import sys
+import json
 # Important globals
 host = "localhost"
 port = "8082"
@@ -62,20 +63,22 @@ def insert_message(port, username, recipientname, massage_content):
 @post('/api/get_all_message/<port:path>/<username:path>')
 def get_all_message(port, username):
     output = requests.post(db_url + '/db/get_all_message/' + username)
+    data = json.loads(output.content)
     #print(output)
     #print(output.json())
     #output = json.loads(output)
 
-    log(port, "get_all_message", username, output)
+    log(port, "get_all_message", username, data)
     #a = []
     return output.content
 
 @post('/api/get_allmessages/<port:path>')
 def get_allmessages(port):
     output = requests.post(db_url + '/db/get_allmessages')
+    data = json.loads(output.content)
     #output = decode(output)
 
-    log(port, "get_allmessages", "None", output)
+    log(port, "get_allmessages", "Admin", data)
     #a = []
     return output.content
 

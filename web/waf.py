@@ -27,24 +27,42 @@ def report_attack(input_from, attack_word, string_in):
 def detect_attack(input_from, string_in):
     print("getit")
     print(string_in)
+    origininput = string_in
+    string_in.lower()
     if not debug:
-        inj_str = ['\'','and','exec','insert','select','delete','update','count','*','%','chr','mid','master','truncate','char','declare',';','or','-','+',',','<','>','script']
-        for word in inj_str:
-            if word in string_in:
-                print(word)
-                report_attack(input_from, word, string_in)
-                return "We detect sql injections from your input. Stop attacking our website."
-        print("noattack")
+        attacks = ['\' +or','\' +and', '\) *--', '< *script']
+        for attack in attacks:
+            if re.search(attack, string_in) is not None:
+                report_attack(input_from, attack, origininput)
+                return "Stop attacking our website."
+
         return "True"
     print("debugging")
     return "False"
 
-@post('/waf/email/<input_from:path>/<email:path>')
-def verify_email(input_from, email):
-    if '@' in email:
-        return 'True'
-    else:
-        return "Not an email address"
+@post('/waf/detect_from_un_and_pw/<input_from:path>/<string_in:path>')
+def detect_attack_from_usrname_and_pw(input_from, string_in):
+    print("getit")
+    print(string_in)
+    origininput = string_in
+    string_in.lower()
+    if not debug:
+        attacks = ['\' +or','\' +and', '\) *--', '< *script']
+        for attack in attacks:
+            if re.search(attack, string_in) is not None:
+                report_attack(input_from, attack, origininput)
+                return "Stop attacking our website."
+
+        inj_str = ['\'', '-', ' ', '<','>','script']
+        for word in inj_str:
+            if word in string_in:
+                print(word)
+                #report_attack(input_from, word, origininput)
+                return "Don't include \'" + word + "\' in your username or password."
+        print("noattack")
+        return "True"
+    print("debugging")
+    return "False"
 
 @post('/waf/password/<input_from:path>/<password:path>')
 def verify_password(input_from, password):
@@ -67,8 +85,9 @@ def verify_password(input_from, password):
 def get_origin_string(string_in):
     print("get_origin_string")
     print(string_in)
+
     if not debug:
-        inj_str = ['\'','and','exec','insert','select','delete','update','count','*','%','chr','mid','master','truncate','char','declare',';','or','-','+',',','<','>','script']
+        inj_str = ['\'','-']
         for words in inj_str:
             return "False"
         return "True"

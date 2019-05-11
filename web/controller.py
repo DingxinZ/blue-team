@@ -5,7 +5,8 @@ import requests
 import sys
 
 waf_url = 'http://localhost:8081/waf/'
-if len(sys.argv) == 7:
+port = sys.argv[2]
+if len(sys.argv) == 8:
     port = sys.argv[2]
     waf_host = sys.argv[3]
     waf_port = sys.argv[4]
@@ -74,8 +75,8 @@ def post_login():
     username = request.forms.get('username')
     password = request.forms.get('password')
 
-    a = send_request('detect/', 'login_username/', username)
-    b = send_request('detect/', 'login_password/', password)
+    a = send_request('detect_from_un_and_pw/', 'login_username/', username)
+    b = send_request('detect_from_un_and_pw/', 'login_password/', password)
 
     #print(a.content.decode())
     if a != "True":
@@ -94,8 +95,8 @@ def post_register():
     username = request.forms.get('username')
     password = request.forms.get('password')
     password2 = request.forms.get('password2')
-    a = send_request('detect/', 'register_username/', username)
-    b = send_request('detect/', 'register_password/', password)
+    a = send_request('detect_from_un_and_pw/', 'register_username/', username)
+    b = send_request('detect_from_un_and_pw/', 'register_password/', password)
 
     c = send_request('password/', 'register_password/', password)
 
@@ -119,7 +120,7 @@ def post_message():
     recipientname = request.forms.get('recipientname')
     massage_content = request.forms.get('massage_content')
 
-    a = send_request('detect/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
+    a = send_request('detect_from_un_and_pw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
     b = send_request('detect/', 'post_message_massage_content_from_user: '+ request.get_cookie("username") + '/', massage_content)
     if a != "True":
         return model.error_page(a)
@@ -177,7 +178,7 @@ def get_banuser():
 @post('/ban')
 def post_banuser():
     username = request.forms.get('username')
-    a = send_request('detect/', 'banuser_username/', username)
+    a = send_request('detect_from_un_and_pw/', 'banuser_username/', username)
     if a != "True":
         return model.error_page(a)
     return model.ban(username)
@@ -185,7 +186,7 @@ def post_banuser():
 @post('/Lift')
 def post_liftuser():
     username = request.forms.get('username')
-    a = send_request('detect/', 'liftuser_username/', username)
+    a = send_request('detect_from_un_and_pw/', 'liftuser_username/', username)
     if a != "True":
         return model.error_page(a)
     return model.lift(username)

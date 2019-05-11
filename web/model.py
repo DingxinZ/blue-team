@@ -25,12 +25,13 @@ api_url = 'http://localhost:8082/api/'
 
 # Initialise our views, all arguments are defaults
 page_view = view.View()
-
-if len(sys.argv) == 7:
+port = sys.argv[2]
+if len(sys.argv) == 8:
     port = sys.argv[2]
     api_host = sys.argv[5]
     api_port = sys.argv[6]
     api_url = 'http://' + api_host + ':' + api_port + '/api/'
+    page_view.template_path = sys.argv[7]
 
 
 a = requests.post(api_url + 'setup/' + port)

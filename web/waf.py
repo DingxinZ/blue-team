@@ -25,19 +25,16 @@ def report_attack(input_from, attack_word, string_in):
 
 @post('/waf/detect/<input_from:path>/<string_in:path>')
 def detect_attack(input_from, string_in):
-    print("getit")
-    print(string_in)
     origininput = string_in
     string_in.lower()
     if not debug:
-        attacks = ['\' +or','\' +and', '\) *--', '< *script']
+        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script']
         for attack in attacks:
             if re.search(attack, string_in) is not None:
                 report_attack(input_from, attack, origininput)
                 return "Stop attacking our website. Don't put " + attack + "in message"
 
         return "True"
-    print("debugging")
     return "False"
 
 @post('/waf/detectunandpw/<input_from:path>/<string_in:path>')
@@ -47,7 +44,7 @@ def detect_attack_from_usrname_and_pw(input_from, string_in):
     origininput = string_in
     string_in.lower()
     if not debug:
-        attacks = ['\' +or','\' +and', '\) *--', '< *script']
+        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script']
         for attack in attacks:
             if re.search(attack, string_in) is not None:
                 report_attack(input_from, attack, origininput)

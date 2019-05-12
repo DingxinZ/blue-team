@@ -39,8 +39,6 @@ def detect_attack(input_from, string_in):
 
 @post('/waf/detectunandpw/<input_from:path>/<string_in:path>')
 def detect_attack_from_usrname_and_pw(input_from, string_in):
-    print("getit")
-    print(string_in)
     origininput = string_in
     string_in.lower()
     if not debug:
@@ -50,10 +48,7 @@ def detect_attack_from_usrname_and_pw(input_from, string_in):
                 report_attack(input_from, attack, origininput)
                 return "Stop attacking our website."
 
-
-        print("noattack")
         return "True"
-    print("debugging")
     return "False"
 
 @post('/waf/password/<input_from:path>/<password:path>')

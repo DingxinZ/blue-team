@@ -1,0 +1,540 @@
+1557631797777	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.7YeSl6UgVVeN"
+*** You are running in headless mode.
+1557631798408	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557631798408	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557631798408	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557631799918	Marionette	INFO	Listening on port 64844
+1557631800017	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557632977754	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.Ue8GkOX5yxzL"
+*** You are running in headless mode.
+1557632978230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557632978230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557632978230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557632979454	Marionette	INFO	Listening on port 65103
+1557632979498	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1557633210785	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.e9tBX9ffllVy"
+*** You are running in headless mode.
+1557633211280	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557633211280	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557633211280	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557633212510	Marionette	INFO	Listening on port 65223
+1557633212534	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1557633624029	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.rYrwQYKBRLX0"
+*** You are running in headless mode.
+1557633624420	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557633624421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557633624421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557633625649	Marionette	INFO	Listening on port 49336
+1557633625698	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1557633662009	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.MyTQUp1qXiYH"
+*** You are running in headless mode.
+1557633662365	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557633662366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557633662366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557633663493	Marionette	INFO	Listening on port 49385
+1557633663547	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557633721337	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.vd7NjRdYa0ui"
+1557633721737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557633721737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557633721737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557633723047	Marionette	INFO	Listening on port 49442
+1557633723098	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557633728483	Marionette	INFO	Stopped listening on port 49442
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1557634041524	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.cQ9PBZyIvgEw"
+1557634041999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557634041999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557634041999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557634043457	Marionette	INFO	Listening on port 49649
+1557634043481	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557634097616	Marionette	INFO	Stopped listening on port 49649
+1557634101220	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.Sc9RGgzEGWjc"
+*** You are running in headless mode.
+1557634101569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557634101569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557634101569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557634102692	Marionette	INFO	Listening on port 49695
+1557634102750	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557634198811	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.UfT0v6ixGsOd"
+1557634199208	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557634199209	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557634199209	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557634200516	Marionette	INFO	Listening on port 49744
+1557634200547	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1557634218238	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.LooWtsVp0zTd"
+1557634218634	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557634218635	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557634218635	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557634219975	Marionette	INFO	Listening on port 49786
+1557634219984	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1557634860298	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.O05tpwp3kTAS"
+1557634860787	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557634860788	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557634860788	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557634862155	Marionette	INFO	Listening on port 49969
+1557634862239	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1557635029846	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.6qkI0rXW8e7M"
+1557635030358	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635030358	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635030358	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635032003	Marionette	INFO	Listening on port 50023
+1557635032099	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635033431	Marionette	INFO	Stopped listening on port 49969
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635100516	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.TI7zIkV6TRje"
+1557635100939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635100939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635100939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635102255	Marionette	INFO	Listening on port 50076
+1557635102356	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635103951	Marionette	INFO	Stopped listening on port 50023
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635484413	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.2Vfm36lkNe6z"
+1557635484823	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635484823	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635484823	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635486161	Marionette	INFO	Listening on port 50179
+1557635486254	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635487971	Marionette	INFO	Stopped listening on port 50076
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635574331	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.gAB0z5csvlPW"
+1557635574752	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635574753	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635574753	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635576113	Marionette	INFO	Listening on port 50233
+1557635576184	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635577523	Marionette	INFO	Stopped listening on port 50179
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635635340	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.F1mwEJim7wjk"
+1557635635735	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635635735	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635635735	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635637061	Marionette	INFO	Listening on port 50277
+1557635637089	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635638744	Marionette	INFO	Stopped listening on port 50233
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635911009	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.wcBWX6FjSAvj"
+1557635911414	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557635911415	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557635911415	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557635912750	Marionette	INFO	Listening on port 50340
+1557635912776	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557635914108	Marionette	INFO	Stopped listening on port 50277
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636334307	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.4tU3bmH412nF"
+1557636334721	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557636334722	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557636334722	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557636336058	Marionette	INFO	Listening on port 50398
+1557636336139	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636337402	Marionette	INFO	Stopped listening on port 50340
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636560002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.cdAB2RhR4uV8"
+1557636560410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557636560410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557636560410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557636561744	Marionette	INFO	Listening on port 50449
+1557636561844	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636654181	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.RyYvC8HRCQdg"
+1557636654584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557636654584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557636654584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557636655958	Marionette	INFO	Listening on port 50507
+1557636656036	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636657775	Marionette	INFO	Stopped listening on port 50398
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636659968	Marionette	INFO	Stopped listening on port 50449
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636903844	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.EntDhZyAlAFK"
+1557636904251	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557636904251	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557636904251	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557636905600	Marionette	INFO	Listening on port 50573
+1557636905700	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557636907435	Marionette	INFO	Stopped listening on port 50507
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638019322	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.SdZiue89976r"
+1557638019732	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557638019732	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557638019732	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557638021075	Marionette	INFO	Listening on port 50757
+1557638021168	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638021905	Marionette	INFO	Stopped listening on port 50573
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638193651	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.bdYuhrnHfxFA"
+1557638194089	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557638194089	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557638194089	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557638195421	Marionette	INFO	Listening on port 50807
+1557638195486	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638199012	Marionette	INFO	Stopped listening on port 50757
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638419901	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.ILmwK8cy66Ct"
+1557638420313	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557638420314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557638420314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557638421691	Marionette	INFO	Listening on port 50869
+1557638421740	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638423179	Marionette	INFO	Stopped listening on port 50807
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638603176	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "headless" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.SF8PVnJoaxeY"
+1557638603572	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557638603572	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557638603572	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557638604920	Marionette	INFO	Listening on port 50938
+1557638605031	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638606216	Marionette	INFO	Stopped listening on port 50869
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557638662983	Marionette	INFO	Stopped listening on port 50938
+1557639079817	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.1gLgXjevMxFG"
+1557639080241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639080241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639080241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639081572	Marionette	INFO	Listening on port 51014
+1557639081656	Marionette	WARN	TLS certificate errors will be ignored for this session
+1557639107518	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.rvNpjQbUhN4J"
+1557639107917	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639107917	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639107917	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639109273	Marionette	INFO	Listening on port 51055
+1557639109376	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639110893	Marionette	INFO	Stopped listening on port 51014
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639119267	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:224:64
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639150417	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:224:64
+1557639207396	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.jA0uySlpIdPu"
+1557639207805	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639207805	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639207805	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639209122	Marionette	INFO	Listening on port 51109
+1557639209151	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639211907	Marionette	INFO	Stopped listening on port 51055
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639219414	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:224:64
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639249997	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:224:64
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639272103	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:224:64
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639311584	Marionette	INFO	Stopped listening on port 51109
+1557639328013	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.2E7VKwuiic9s"
+1557639328427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639328428	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639328428	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639329744	Marionette	INFO	Listening on port 51173
+1557639329766	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639512481	Marionette	INFO	Stopped listening on port 51173
+1557639519257	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.4j4C9sEywI62"
+1557639519663	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639519663	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639519663	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639520977	Marionette	INFO	Listening on port 51232
+1557639521001	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639567450	Marionette	INFO	Stopped listening on port 51232
+1557639728293	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zy/r563f5m94x5c0h_ghl1rlvsm0000gn/T/rust_mozprofile.nzeI4ETAVzD3"
+1557639728694	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557639728694	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557639728694	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557639730056	Marionette	INFO	Listening on port 51294
+1557639730142	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: http://10.83.65.37:8080/js/script_head.js, line 1: SyntaxError: expected expression, got '<'
+1557639799752	Marionette	INFO	Stopped listening on port 51294

@@ -17,9 +17,9 @@ import requests
 
 
 
-database = sql.SQLDatabase()
+
 #database.database_setup()
-theuser = userid.userid()
+
 print("!!! ")
 api_url = 'http://localhost:8082/api/'
 
@@ -133,14 +133,10 @@ def login_check(username, password):
         r = request.get_cookie("logged_in")
         print("the new cookie is", r)
         if username == "admin":
-            theuser.username = username
-            theuser.isadmin = True
-            theuser.userheader = "headeradmin"
+
             return page_view("index", "headeradmin")
         else:
-            theuser.username = username
-            theuser.logged_in = True
-            theuser.userheader = "headerloggedin"
+
             return page_view("index", "headerloggedin")
     else:
         return page_view("invalid", checkheader(), reason=err_str)
@@ -212,9 +208,7 @@ def lift(username):
 
 
 def logout():
-    theuser.userheader = "header"
-    theuser.logged_in = False
-    theuser.isadmin = False
+
     response.set_cookie("logged_in", "False", path="/")
     #print(request.get_cookie("again the new cookie is", r))
     #print(a)
@@ -224,7 +218,6 @@ def logout():
 
 
 def profile():
-    username = theuser.username
     return page_view.profile(request.get_cookie("username"),checkheader())
 
 
@@ -242,12 +235,6 @@ def html_int():
 
 def html_tut():
     return page_view("HTML-tut", checkheader())
-    if theuser.logged_in:
-        print(theuser.logged_in)
-        return page_view("HTML-tut", checkheader())
-    else:
-        print(theuser.logged_in)
-        return page_view("HTML-tut")
 
 def css_int():
     return page_view("CSS-int", checkheader())

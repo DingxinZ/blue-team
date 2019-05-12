@@ -8,7 +8,6 @@ from bottle import run
 import model
 import view
 import controller
-import userid
 import sys
 #-----------------------------------------------------------------------------
 

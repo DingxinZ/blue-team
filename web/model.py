@@ -10,8 +10,6 @@ import sys
     Nothing here should be stateful, if it's stateful let the database handle it
 '''
 import view
-import sql
-import userid
 import time
 import requests
 

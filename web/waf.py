@@ -75,7 +75,7 @@ def verify_password(input_from, password):
 
     inj_str = ['\'', '-', ' ', '<','>','script']
     for word in inj_str:
-        if word in string_in:
+        if word in password:
             print(word)
             #report_attack(input_from, word, origininput)
             return "Don't include \'" + word + "\' in your username or password."

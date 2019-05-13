@@ -26,7 +26,7 @@ import sys
 host = 'localhost'
 
 # Test port, change to the appropriate port to host
-port = 8080
+port = 80
 
 if len(sys.argv) == 8:
     host = sys.argv[1]

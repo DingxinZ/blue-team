@@ -172,7 +172,8 @@ def send_message():
     if a.content.decode() == 'True':
         return page_view("sendmessage", checkheader())
     else:
-        return page_view("index", checkheader())
+        return page_view("invalid", checkheader(), reason="You have been banned")
+        #return page_view("index", checkheader())
 
 def message_box():
     data = requests.post(api_url + 'get_all_message/' + port + '/' + request.get_cookie("username"))
@@ -208,8 +209,7 @@ def lift(username):
 def logout():
 
     response.set_cookie("logged_in", "False", path="/")
-    #print(request.get_cookie("again the new cookie is", r))
-    #print(a)
+
     time.sleep(1)
     return page_view("index", "header")
 

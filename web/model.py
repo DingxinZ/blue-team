@@ -60,9 +60,9 @@ def checkheader():
         print("except")
         haslogin = False
     if haslogin:
-        if isadmin:
-            return "headeradmin"
-        else:
+        #if isadmin:
+        #    return "headeradmin"
+        #else:
             return "headerloggedin"
 
     else:

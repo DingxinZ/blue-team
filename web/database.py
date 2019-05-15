@@ -69,7 +69,7 @@ def database_setup():
     #execute("""SELECT * FROM Users""")
     #print("fetch:",cur.fetchone())
     # Add our admin user
-    add_user('admin', 'admin', admin=1, muted=0)
+    add_user('adminxia', 'adminaaabjdhuas', admin=1, muted=0)
     return "setup"
 
 

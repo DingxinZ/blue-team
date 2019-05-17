@@ -72,9 +72,24 @@ def database_setup():
     add_user('adminxia', 'adminaaabjdhuas', admin=1, muted=0)
     return "setup"
 
+def checkusername(username):
+    sql_query = """
+            SELECT *
+            FROM Users
+            WHERE username = '{username}'
+        """.format(username=username)
+    cur.execute(sql_query)
+    # If our query returns
+
+    if cur.fetchone():
+        return True
+    return False
 
 @post('/db/add_user/<username:path>/<password:path>')
 def add_user(username, password, admin=0, muted = 0):
+    b = checkusername(username)
+    if b == True :
+        return "user aleady exist"
     a = count_user()
     sql_cmd = """
             INSERT INTO Users

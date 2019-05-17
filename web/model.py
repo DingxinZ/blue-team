@@ -182,9 +182,9 @@ def login_check(username, password):
 
 def create_account(username, password):
 
-    requests.post(api_url + 'add_user/' + port + '/' + username + '/' + password)
-    #database.add_user(username, password, 1, 0)
-
+    r = requests.post(api_url + 'add_user/' + port + '/' + username + '/' + password)
+    if r != "The user is added":
+        return page_view("invalid", "header", reason="Please use another username")
     return login_page()
 
 

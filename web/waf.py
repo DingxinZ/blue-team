@@ -28,7 +28,7 @@ def detect_attack(input_from, string_in):
     origininput = string_in
     string_in.lower()
     if not debug:
-        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\','\/','alert']
+        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert']
         for attack in attacks:
             if re.search(attack, string_in) is not None:
                 report_attack(input_from, attack, origininput)
@@ -43,7 +43,7 @@ def detect_attack_from_usrname_and_pw(input_from, string_in):
     string_in.lower()
     print(string_in)
     if not debug:
-        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\','\/','alert']
+        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert']
         for attack in attacks:
             if re.search(attack, string_in) is not None:
                 report_attack(input_from, attack, origininput)

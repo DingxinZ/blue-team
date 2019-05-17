@@ -1,5 +1,7 @@
 from bottle import route, get, post, request, redirect, static_file
 
+import hashlib
+
 import model
 import requests
 import sys
@@ -122,10 +124,13 @@ def post_message():
 
     a = send_request('detectunandpw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
     b = send_request('detect/', 'post_message_massage_content_from_user: '+ request.get_cookie("username") + '/', massage_content)
+    c = send_request('detectunandpw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', request.get_cookie("username"))
     if a != "True":
         return model.error_page(a)
     if b != "True":
         return model.error_page(b)
+    if c != "True":
+        return model.error_page(c)
 
     # Call the appropriate method
     return model.insert_message(recipientname, massage_content)

@@ -25,56 +25,65 @@ def report_attack(input_from, attack_word, string_in):
 
 @post('/waf/detect/<input_from:path>/<string_in:path>')
 def detect_attack(input_from, string_in):
-    origininput = string_in
-    string_in.lower()
-    if not debug:
-        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert','=','click','"']
-        for attack in attacks:
-            if re.search(attack, string_in) is not None:
-                report_attack(input_from, attack, origininput)
-                return "Stop attacking our website."
+    try:
+        origininput = string_in
+        string_in.lower()
+        if not debug:
+            attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert','=','click','"']
+            for attack in attacks:
+                if re.search(attack, string_in) is not None:
+                    report_attack(input_from, attack, origininput)
+                    return "Stop attacking our website."
 
-        return "True"
-    return "False"
+            return "True"
+        return "False"
+    except:
+        return "Stop attacking our website."
 
 @post('/waf/detectunandpw/<input_from:path>/<string_in:path>')
 def detect_attack_from_usrname_and_pw(input_from, string_in):
-    origininput = string_in
-    string_in.lower()
-    print(string_in)
-    if not debug:
-        attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert','=','click','"']
-        for attack in attacks:
-            if re.search(attack, string_in) is not None:
-                report_attack(input_from, attack, origininput)
-                return "Stop attacking our website."
+    try:
+        origininput = string_in
+        string_in.lower()
+        print(string_in)
+        if not debug:
+            attacks = ['\' +or','\' +and', '\' *\) *;', '< *script','and','delete','or',';',',','-','\+','\*','scr','admin','>','<','drop','script', '\\\\','/','alert','=','click','"']
+            for attack in attacks:
+                if re.search(attack, string_in) is not None:
+                    report_attack(input_from, attack, origininput)
+                    return "Stop attacking our website."
 
-        return "True"
-    return "False"
+            return "True"
+        return "False"
+    except:
+        return "Stop attacking our website."
 
 @post('/waf/password/<input_from:path>/<password:path>')
 def verify_password(input_from, password):
-    if len(password) < 8:
-        print("Password is too short")
-        return "Password is too short"
+    try:
+        if len(password) < 8:
+            print("Password is too short")
+            return "Password is too short"
 
-    if not any(c in string.ascii_lowercase for c in password):
-        print("Password must contain at least one lowercase character")
-        return "Password must contain at least one lowercase character"
+        if not any(c in string.ascii_lowercase for c in password):
+            print("Password must contain at least one lowercase character")
+            return "Password must contain at least one lowercase character"
 
-    if not any(c in string.ascii_uppercase for c in password):
-        print("Password must contain at least one uppercase character")
-        return "Password must contain at least one uppercase character"
+        if not any(c in string.ascii_uppercase for c in password):
+            print("Password must contain at least one uppercase character")
+            return "Password must contain at least one uppercase character"
 
-    inj_str = ['\'', '-', ' ', '<','>','script']
-    for word in inj_str:
-        if word in password:
-            print(word)
-            #report_attack(input_from, word, origininput)
-            return "Don't include \'" + word + "\' in your username or password."
+        inj_str = ['\'', '-', ' ', '<','>','script']
+        for word in inj_str:
+            if word in password:
+                print(word)
+                #report_attack(input_from, word, origininput)
+                return "Don't include \'" + word + "\' in your username or password."
 
-    print("password valid")
-    return 'True'
+        print("password valid")
+        return 'True'
+    except:
+        return "Stop attacking our website."
 
 # droped function
 @post('/waf/originstring/<string_in:path>')

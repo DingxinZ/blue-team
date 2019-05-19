@@ -119,4 +119,4 @@ if len(sys.argv) == 5:
 
 db_url = 'http://' + host + ':' + database
 # Run the server
-run(host=host, port=port, server='cherrypy')
+run(host=host, port=port)

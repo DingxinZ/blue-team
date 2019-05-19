@@ -218,4 +218,4 @@ if len(sys.argv) == 4:
 conn = sqlite3.connect(database)
 cur = conn.cursor()
 # Run the server
-run(host=host, port=port, server='cherrypy')
+run(host=host, port=port)

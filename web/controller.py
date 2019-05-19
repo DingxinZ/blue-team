@@ -76,7 +76,8 @@ def post_login():
     # Handle the form processing
     username = request.forms.get('username')
     password = request.forms.get('password')
-
+    if len(username)== 0 or len(password)==0:
+        return model.error_page("please enter something")
     a = send_request('detectunandpw/', 'login_username/', username)
     b = send_request('detectunandpw/', 'login_password/', password)
 
@@ -97,6 +98,8 @@ def post_register():
     username = request.forms.get('username')
     password = request.forms.get('password')
     password2 = request.forms.get('password2')
+    if len(username)== 0 or len(password)==0 or len(password2)==0:
+        return model.error_page("please enter something")
     a = send_request('detectunandpw/', 'register_username/', username)
     b = send_request('detectunandpw/', 'register_password/', password)
 
@@ -121,7 +124,8 @@ def post_message():
     # Handle the form processing
     recipientname = request.forms.get('recipientname')
     massage_content = request.forms.get('massage_content')
-
+    if len(recipientname)== 0 or len(massage_content)==0:
+        return model.error_page("please enter something")
     a = send_request('detectunandpw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', recipientname)
     b = send_request('detect/', 'post_message_massage_content_from_user: '+ request.get_cookie("username") + '/', massage_content)
     c = send_request('detectunandpw/', 'post_message_recipientname_from_user: ' + request.get_cookie("username") + '/', request.get_cookie("username"))

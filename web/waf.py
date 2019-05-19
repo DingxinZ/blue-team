@@ -128,4 +128,4 @@ if len(sys.argv) == 4:
 
 
 # Run the server
-run(host=host, port=port)
+run(host=host, port=port, server='cherrypy')

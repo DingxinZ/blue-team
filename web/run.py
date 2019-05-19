@@ -37,4 +37,4 @@ debug = True
 #-----------------------------------------------------------------------------
 
 #Run the server
-run(host=host, port=port, debug=debug)
+run(host=host, port=port, debug=debug, server='cherrypy')

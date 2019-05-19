@@ -35,7 +35,7 @@ if len(sys.argv) == 8:
     api_url = 'http://' + api_host + ':' + api_port + '/api/'
     page_view.template_path = sys.argv[7]
 
-for _ in range(1000):
+for _ in range(10):
     try:
         a = requests.post(api_url + 'setup/' + port)
         break

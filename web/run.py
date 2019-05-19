@@ -1,4 +1,8 @@
 from bottle import run
+try:
+    from cheroot.wsgi import Server as WSGIServer
+except ImportError:
+    from cherrypy.wsgiserver import CherryPyWSGIServer as WSGIServer
 
 #-----------------------------------------------------------------------------
 # Get our components

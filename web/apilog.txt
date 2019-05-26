@@ -1,0 +1,65 @@
+From_port: 8080
+Function_name: setup
+Input: None
+Output: setup
+
+From_port: 8080
+Function_name: setup
+Input: None
+Output: setup
+
+From_port: 8080
+Function_name: check_credentials
+Input: admin, admin
+Output: Valid username and password
+
+From_port: 8080
+Function_name: check_muted
+Input: admin
+Output: True
+
+From_port: 8080
+Function_name: insert_message
+Input: admin, 123,Message content132
+Output: True
+
+From_port: 8080
+Function_name: check_muted
+Input: admin
+Output: True
+
+From_port: 8080
+Function_name: get_allmessages
+Input: None
+Output: <Response [200]>
+
+From_port: 8080
+Function_name: get_all_message
+Input: admin
+Output: <Response [200]>
+
+From_port: 8080
+Function_name: check_muted
+Input: admin
+Output: True
+
+From_port: 8080
+Function_name: insert_message
+Input: admin, admin,Message content345
+Output: True
+
+From_port: 8080
+Function_name: check_muted
+Input: admin
+Output: True
+
+From_port: 8080
+Function_name: get_all_message
+Input: admin
+Output: <Response [200]>
+
+From_port: 8080
+Function_name: get_allmessages
+Input: None
+Output: <Response [200]>
+

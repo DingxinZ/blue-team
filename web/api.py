@@ -56,9 +56,9 @@ def check_credentials(port, username, password):
 @post('/api/insert_message/<port:path>/<username:path>/<recipientname:path>/<massage_content:path>')
 def insert_message(port, username, recipientname, massage_content):
 
-    massage_content.replace("'","")
-    massage_content.replace(";","")
-    massage_content.repalce("<", "< ")
+    #massage_content.replace("'","")
+    #massage_content.replace(";","")
+    massage_content = massage_content.repalce("<", "< ")
     output = requests.post(db_url + '/db/insert_message/' + username + '/' + recipientname + '/' + massage_content)
     output = decode(output)
 

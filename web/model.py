@@ -193,7 +193,7 @@ def create_account(username, password):
 
 def insert_message(recipientname, massage_content):
 
-    massage_content.replace("<","< ")
+    massage_content=massage_content.replace("<","< ")
 
     requests.post(api_url + 'insert_message/' + port + '/' + request.get_cookie("username") + '/' + recipientname + '/' + massage_content)
     #database.insert_message(request.get_cookie("username"), recipientname, massage_content)

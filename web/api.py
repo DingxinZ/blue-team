@@ -70,8 +70,8 @@ def get_all_message(port, username):
     output = requests.post(db_url + '/db/get_all_message/' + username)
     data = json.loads(output.content)
 
-    data.replace("AaBbCCC", "'")
-    data.replace("AaBbCCZ", ";")
+    #data.replace("AaBbCCC", "'")
+    #data.replace("AaBbCCZ", ";")
 
     log(port, "get_all_message", username, data)
     #a = []

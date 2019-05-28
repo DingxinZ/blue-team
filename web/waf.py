@@ -30,7 +30,7 @@ def detect_attack(input_from, string_in):
         origininput = string_in
         string_in.lower()
         if not debug:
-            attacks = ['\' +or','\' +and', '\' *\) *;', '< *script', '<object','\' +and','; *delete','; *select', '; *insert','; *drop', '\' +or','--','\+','\*','scr','admin','>','<','drop','\\\\','/','=','"','\[','\]']
+            attacks = ['\' +or','\' +and', '\' *\) *;', '< *script', '<object','\' +and','; *delete','; *select', '; *insert','; *drop', '\' +or','--','\+','\*','scr','admin','drop','\\\\','/','=','"','\[','\]']
             for attack in attacks:
                 if re.search(attack, string_in) is not None:
                     report_attack(input_from, attack, origininput)

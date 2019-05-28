@@ -58,7 +58,7 @@ def insert_message(port, username, recipientname, massage_content):
 
     massage_content.replace("'","AaBbCCC")
     massage_content.replace(";","AaBbCCZ")
-
+    massage_content.repalce("<", "< ")
     output = requests.post(db_url + '/db/insert_message/' + username + '/' + recipientname + '/' + massage_content)
     output = decode(output)
 

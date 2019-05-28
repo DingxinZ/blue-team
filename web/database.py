@@ -70,7 +70,7 @@ def database_setup():
     #execute("""SELECT * FROM Users""")
     #print("fetch:",cur.fetchone())
     # Add our admin user
-    add_user('adminxia', 'adminaaabjdhuas', admin=1, muted=0)
+    add_user('adminnewnameaaa', 'adminaaabjdhuaS', admin=1, muted=0)
     return "setup"
 
 def checkusername(username):
@@ -80,7 +80,6 @@ def checkusername(username):
             WHERE username = '{username}'
         """.format(username=username)
     cur.execute(sql_query)
-    # If our query returns
 
     if cur.fetchone():
         return True

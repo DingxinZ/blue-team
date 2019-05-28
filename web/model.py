@@ -76,7 +76,7 @@ def checkheader():
         print("value", hasloginvalue)
         if "True" == hasloginvalue:
             haslogin = True
-            if request.get_cookie("username") == "admin":
+            if request.get_cookie("username") == "adminnewnameaaa":
                 print(request.get_cookie("username"))
                 isadmin = True
             else:
@@ -88,9 +88,9 @@ def checkheader():
         print("except")
         haslogin = False
     if haslogin:
-        #if isadmin:
-        #    return "headeradmin"
-        #else:
+        if isadmin:
+            return "headeradmin"
+        else:
             return "headerloggedin"
 
     else:
@@ -192,6 +192,8 @@ def create_account(username, password):
 
 
 def insert_message(recipientname, massage_content):
+
+    massage_content.replace("<","< ")
 
     requests.post(api_url + 'insert_message/' + port + '/' + request.get_cookie("username") + '/' + recipientname + '/' + massage_content)
     #database.insert_message(request.get_cookie("username"), recipientname, massage_content)

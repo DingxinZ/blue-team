@@ -55,6 +55,10 @@ def check_credentials(port, username, password):
 
 @post('/api/insert_message/<port:path>/<username:path>/<recipientname:path>/<massage_content:path>')
 def insert_message(port, username, recipientname, massage_content):
+
+    massage_content.replace("'","AaBbCCC")
+    massage_content.replace(";","AaBbCCZ")
+
     output = requests.post(db_url + '/db/insert_message/' + username + '/' + recipientname + '/' + massage_content)
     output = decode(output)
 
@@ -65,9 +69,9 @@ def insert_message(port, username, recipientname, massage_content):
 def get_all_message(port, username):
     output = requests.post(db_url + '/db/get_all_message/' + username)
     data = json.loads(output.content)
-    #print(output)
-    #print(output.json())
-    #output = json.loads(output)
+
+    massage_content.replace("AaBbCCC", "'")
+    massage_content.replace("AaBbCCZ", ";")
 
     log(port, "get_all_message", username, data)
     #a = []
@@ -75,6 +79,10 @@ def get_all_message(port, username):
 
 @post('/api/get_allmessages/<port:path>')
 def get_allmessages(port):
+
+    massage_content.replace("AaBbCCC", "'")
+    massage_content.replace("AaBbCCZ", ";")
+
     output = requests.post(db_url + '/db/get_allmessages')
     data = json.loads(output.content)
     #output = decode(output)
